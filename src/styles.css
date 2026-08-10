@@ -1,0 +1,168 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * R.V.M Waterproofing design system.
+ * Palette: Ocean Deep (deep navy -> teal). Headings: Archivo Black. Body: Hind.
+ * All colours are oklch semantic tokens. Never hardcode colours in components.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --font-display: "Archivo Black", "Arial Black", sans-serif;
+  --font-sans: "Hind", ui-sans-serif, system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-deep: var(--deep);
+  --color-deep-foreground: var(--deep-foreground);
+  --color-surface: var(--surface);
+}
+
+:root {
+  --radius: 0.25rem;
+
+  /* Ocean Deep */
+  --deep: oklch(0.245 0.062 254);
+  --deep-foreground: oklch(0.97 0.01 220);
+  --surface: oklch(0.36 0.066 243);
+
+  --background: oklch(0.223 0.058 254);
+  --foreground: oklch(0.968 0.011 220);
+  --card: oklch(0.283 0.06 250);
+  --card-foreground: oklch(0.968 0.011 220);
+  --popover: oklch(0.283 0.06 250);
+  --popover-foreground: oklch(0.968 0.011 220);
+  --primary: oklch(0.735 0.083 190);
+  --primary-foreground: oklch(0.2 0.055 254);
+  --secondary: oklch(0.36 0.066 243);
+  --secondary-foreground: oklch(0.968 0.011 220);
+  --muted: oklch(0.32 0.055 248);
+  --muted-foreground: oklch(0.79 0.03 215);
+  --accent: oklch(0.585 0.084 216);
+  --accent-foreground: oklch(0.98 0.01 220);
+  --destructive: oklch(0.62 0.2 27);
+  --destructive-foreground: oklch(0.98 0.01 220);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.735 0.083 190);
+
+  --gradient-deep: linear-gradient(160deg, var(--deep) 0%, oklch(0.3 0.07 243) 100%);
+  --gradient-accent: linear-gradient(
+    100deg,
+    oklch(0.585 0.084 216) 0%,
+    oklch(0.735 0.083 190) 100%
+  );
+  --shadow-card: 0 18px 40px -22px oklch(0.12 0.05 254 / 0.85);
+  --shadow-lift: 0 26px 60px -28px oklch(0.1 0.05 254 / 0.95);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+}
+
+@utility bg-gradient-deep {
+  background-image: var(--gradient-deep);
+}
+
+@utility bg-gradient-accent {
+  background-image: var(--gradient-accent);
+}
+
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+@utility shadow-lift {
+  box-shadow: var(--shadow-lift);
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+@utility btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  background-image: var(--gradient-accent);
+  color: var(--color-primary-foreground);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+  }
+}
+
+@utility btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+  color: var(--color-foreground);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-primary);
+  }
+}

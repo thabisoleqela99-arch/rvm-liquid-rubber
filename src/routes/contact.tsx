@@ -5,16 +5,16 @@ import { Clock, Mail, MapPin, Phone } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact R.V.M Waterproofing — Free Roof Inspection in Johannesburg" },
+      { title: "Contact RVM Liquid Rubber — Free Roof Inspection in Johannesburg" },
       {
         name: "description",
         content:
-          "Request a free roof waterproofing inspection or quote in Johannesburg. Commercial and residential enquiries welcome, with 24/7 emergency leak callouts.",
+          "Request a free roof inspection or quote for liquid rubber waterproofing and home improvement in Johannesburg. Call 079 285 9461 or email info@rvmconsulting.co.za.",
       },
-      { property: "og:title", content: "Contact R.V.M Waterproofing" },
+      { property: "og:title", content: "Contact RVM Liquid Rubber" },
       {
         property: "og:description",
-        content: "Book a free roof inspection or quote anywhere in greater Johannesburg.",
+        content: "Book a free roof inspection or home improvement quote anywhere in greater Johannesburg.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/contact" },
@@ -34,7 +34,7 @@ function ContactPage() {
           <p className="eyebrow">Contact</p>
           <h1 className="mt-4 text-4xl uppercase sm:text-5xl">Free roof inspection</h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-            Tell us about the roof and we will come look at it. Commercial site visits and
+            Tell us about the roof or home improvement project and we will come look at it. Commercial site visits and
             residential quotes across greater Johannesburg.
           </p>
         </div>
@@ -96,7 +96,7 @@ function ContactPage() {
               />
             </label>
             <label className="text-sm sm:col-span-2">
-              <span className="text-muted-foreground">What is happening on the roof?</span>
+              <span className="text-muted-foreground">What service or repairs do you need?</span>
               <textarea
                 required
                 name="message"
@@ -110,7 +110,7 @@ function ContactPage() {
           </button>
           {sent ? (
             <p className="mt-4 text-sm text-primary">
-              Thanks — your enquiry is noted. Call us directly for urgent leaks.
+              Thanks — your enquiry is noted. Call us directly on 079 285 9461 for urgent leaks.
             </p>
           ) : null}
         </form>
@@ -124,7 +124,9 @@ function ContactPage() {
                 <span>
                   Phone / WhatsApp
                   <br />
-                  <span className="text-foreground">Add your number</span>
+                  <a href="tel:0792859461" className="text-foreground hover:text-primary transition-colors font-semibold">
+                    079 285 9461
+                  </a>
                 </span>
               </li>
               <li className="flex gap-3">
@@ -132,7 +134,9 @@ function ContactPage() {
                 <span>
                   Email
                   <br />
-                  <span className="text-foreground">Add your email address</span>
+                  <a href="mailto:info@rvmconsulting.co.za" className="text-foreground hover:text-primary transition-colors font-semibold">
+                    info@rvmconsulting.co.za
+                  </a>
                 </span>
               </li>
               <li className="flex gap-3">
@@ -148,7 +152,7 @@ function ContactPage() {
           <div className="rounded-lg border border-border bg-gradient-accent p-6 shadow-lift">
             <h2 className="text-base uppercase text-primary-foreground">Storm damage?</h2>
             <p className="mt-2 text-sm text-primary-foreground/85">
-              Emergency callouts get priority — phone us instead of using the form.
+              Emergency callouts get priority — call 079 285 9461 instead of using the form.
             </p>
           </div>
         </aside>

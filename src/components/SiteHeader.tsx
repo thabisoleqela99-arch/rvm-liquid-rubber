@@ -19,7 +19,7 @@ export function SiteHeader() {
           <img
             src="/RVM Liquid Rubber Logo(Roof Waterproofing).png"
             alt="RVM Liquid Rubber Logo"
-            className="h-12 w-auto object-contain"
+            className="h-18 w-auto object-contain"
           />
         </Link>
 

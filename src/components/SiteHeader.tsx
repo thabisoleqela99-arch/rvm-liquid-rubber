@@ -14,13 +14,21 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-deep/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
-        <Link to="/" className="flex items-center gap-2">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-2">
+        <Link to="/" className="flex items-center gap-3">
           <img
-            src="/RVM Liquid Rubber Logo(Roof Waterproofing).png"
+            src="/Logo.png"
             alt="RVM Liquid Rubber Logo"
-            className="h-18 w-auto object-contain"
+            className="h-16 w-auto object-contain py-1"
           />
+          <div className="flex flex-col">
+            <span className="font-display text-lg font-bold tracking-tight text-white">
+              RVM Liquid Rubber
+            </span>
+            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">
+              The Rubber Genie
+            </span>
+          </div>
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">

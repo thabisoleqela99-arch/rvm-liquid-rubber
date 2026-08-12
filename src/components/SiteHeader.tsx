@@ -14,12 +14,13 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-deep/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-        <Link to="/" className="flex items-baseline gap-2">
-          <span className="font-display text-lg tracking-tight">R.V.M</span>
-          <span className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-            Waterproofing
-          </span>
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+        <Link to="/" className="flex items-center gap-2">
+          <img
+            src="/RVM Liquid Rubber Logo(Roof Waterproofing).png"
+            alt="RVM Liquid Rubber Logo"
+            className="h-12 w-auto object-contain"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
@@ -34,7 +35,7 @@ export function SiteHeader() {
               {l.label}
             </Link>
           ))}
-          <a href="tel:+27000000000" className="btn-primary text-sm">
+          <a href="tel:+27792859461" className="btn-primary text-sm">
             <Phone className="size-4" aria-hidden="true" />
             Get a quote
           </a>
@@ -65,7 +66,7 @@ export function SiteHeader() {
                 {l.label}
               </Link>
             ))}
-            <a href="tel:+27000000000" className="btn-primary mt-3 text-sm">
+            <a href="tel:+27792859461" className="btn-primary mt-3 text-sm">
               <Phone className="size-4" aria-hidden="true" />
               Get a quote
             </a>

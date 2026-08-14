@@ -1,5 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Building2, CheckCircle2, Droplets, Home, Hammer, Phone, ShieldCheck, Wrench } from "lucide-react";
+import { Building2, CheckCircle2, Droplets, Hammer, Phone, ShieldCheck, Wrench } from "lucide-react";
+
+import { ProjectCarousel } from "@/components/ProjectCarousel";
+
 import heroRoof from "@/assets/hero-roof.jpg";
 import serviceTorchOn from "@/assets/service-torch-on.jpg";
 import serviceResidential from "@/assets/service-residential.jpg";
@@ -200,6 +203,9 @@ function Index() {
           </Link>
         </div>
       </section>
+
+      {/* Rolling Portfolio Showcase Carousel */}
+      <ProjectCarousel />
 
       {/* Extras */}
       <section className="border-y border-border bg-deep">

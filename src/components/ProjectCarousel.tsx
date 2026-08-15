@@ -1,173 +1,101 @@
-import { useState } from "react";
-import { X, Layers } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 
-interface Project {
-  id: string;
-  title: string;
-  category: "Roofing" | "Painting" | "Refurbishment" | "Remodelling" | "Ceiling" | "Big Projects";
-  coverImage: string;
-  beforeImages: string[];
-  afterImages: string[];
-}
+// Dynamically retrieve all project images from src/assets
+const assets = import.meta.glob("../assets/**/*.{jpg,jpeg,JPG,JPEG,png,PNG}", {
+  eager: true,
+  import: "default",
+}) as Record<string, string>;
 
-// Map your public folder images here (adjust image filenames to match your exact files)
-const projectsData: Project[] = [
-  {
-    id: "roofing-1",
-    title: "Roof Waterproofing & Sealing",
-    category: "Roofing",
-    coverImage: "/Roofing/after-1.jpg",
-    beforeImages: ["/Roofing/before-1.jpg"],
-    afterImages: ["/Roofing/after-1.jpg"],
-  },
-  {
-    id: "painting-1",
-    title: "Exterior Wall & Roof Coating",
-    category: "Painting",
-    coverImage: "/Painting/after-1.jpg",
-    beforeImages: ["/Painting/before-1.jpg"],
-    afterImages: ["/Painting/after-1.jpg"],
-  },
-  {
-    id: "refurbishment-1",
-    title: "Bathroom & Tile Refurbishment",
-    category: "Refurbishment",
-    coverImage: "/Refurbishment/after-1.jpg",
-    beforeImages: ["/Refurbishment/before-1.jpg"],
-    afterImages: ["/Refurbishment/after-1.jpg"],
-  },
-  {
-    id: "remodelling-1",
-    title: "Interior Space Remodelling",
-    category: "Remodelling",
-    coverImage: "/Remodelling/after-1.jpg",
-    beforeImages: ["/Remodelling/before-1.jpg"],
-    afterImages: ["/Remodelling/after-1.jpg"],
-  },
-  {
-    id: "ceiling-1",
-    title: "Ceiling Repair & Restoration",
-    category: "Ceiling",
-    coverImage: "/Ceiling/after-1.jpg",
-    beforeImages: ["/Ceiling/before-1.jpg"],
-    afterImages: ["/Ceiling/after-1.jpg"],
-  },
-  {
-    id: "big-projects-1",
-    title: "Commercial Site Overhaul",
-    category: "Big Projects",
-    coverImage: "/Big Projects/after-1.jpg",
-    beforeImages: ["/Big Projects/before-1.jpg"],
-    afterImages: ["/Big Projects/after-1.jpg"],
-  },
+const getAsset = (filePath: string) => assets[`../assets/${filePath}`] || "";
+
+// Curated list of small showcase cards for the homepage marquee
+const marqueeItems = [
+  { title: "Roof Waterproofing", type: "After", cat: "Roofing", src: getAsset("Roofing/Project 1/Roofing-After-1.jpeg") },
+  { title: "Patio & Bulkhead", type: "After", cat: "Remodeling", src: getAsset("Remodelling/Remodelling-After-1.jpeg") },
+  { title: "Exterior Painting", type: "After", cat: "Painting", src: getAsset("Painting/Project 1/Painting-After-1.jpeg") },
+  { title: "Water Damage Repair", type: "Before", cat: "Ceiling", src: getAsset("Ceiling/Project 1/Ceiling-Before-1.jpeg") },
+  { title: "Ceiling Installation", type: "After", cat: "Ceiling", src: getAsset("Ceiling/Project 1/Ceiling-After-1.jpeg") },
+  { title: "Roof Coating Prep", type: "Before", cat: "Roofing", src: getAsset("Roofing/Project 1/Roofing-Before-1.jpeg") },
+  { title: "Full Refurbishment", type: "After", cat: "Refurbishment", src: getAsset("Refurbishments/Project 1/Refurbishment-After-1.jpeg") },
+  { title: "Major Renovation", type: "After", cat: "Major Projects", src: getAsset("Major Works/Big-Project-After-1.jpeg") },
+  { title: "Interior Repainting", type: "After", cat: "Painting", src: getAsset("Painting/Project 2/Paint-After-1.jpeg") },
+  { title: "Masonry Remodel", type: "After", cat: "Remodeling", src: getAsset("Remodelling/Project 4/Remodelling-After-1.jpeg") },
 ];
 
 export function ProjectCarousel() {
-  const [activeProject, setActiveProject] = useState<Project | null>(null);
-
-  // Duplicate dataset so the marquee scrolls infinitely without gaps
-  const doubleProjects = [...projectsData, ...projectsData];
+  // Duplicate the array so the marquee loop connects seamlessly
+  const doubledItems = [...marqueeItems, ...marqueeItems];
 
   return (
-    <section className="w-full bg-card border-y border-border py-16 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-5 mb-8 text-center">
-        <p className="eyebrow">Portfolio Showcase</p>
-        <h2 className="text-3xl uppercase font-bold text-foreground">Featured Project Gallery</h2>
-        <p className="text-sm text-muted-foreground mt-2">
-          Click on any project to open the full Before &amp; After photo folder.
-        </p>
+    <section className="border-y border-border bg-deep/50 py-16 overflow-hidden">
+      <style>{`
+        @keyframes continuousMarquee {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+        .marquee-track {
+          display: flex;
+          width: max-content;
+          animation: continuousMarquee 35s linear infinite;
+        }
+        .marquee-track:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+
+      <div className="mx-auto max-w-6xl px-5 mb-8 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p className="eyebrow">Recent Transformations</p>
+          <h2 className="mt-2 text-2xl uppercase sm:text-3xl font-black">Our Work Showcase</h2>
+        </div>
+        <Link to="/our-works" className="btn-outline text-xs flex items-center gap-2">
+          View All Completed Works <ArrowRight className="size-4" />
+        </Link>
       </div>
 
-      {/* Infinite Scroll Track */}
+      {/* Infinite Scrolling Track */}
       <div className="relative w-full overflow-hidden">
-        <div className="flex gap-6 animate-marquee hover:[animation-play-state:paused] w-max">
-          {doubleProjects.map((project, idx) => (
-            <div
-              key={`${project.id}-${idx}`}
-              onClick={() => setActiveProject(project)}
-              className="w-80 shrink-0 cursor-pointer rounded-xl border border-border bg-background p-4 shadow-card hover:border-primary transition-all hover:scale-[1.02]"
+        {/* Soft edge blur overlays */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-16 bg-gradient-to-r from-background to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-16 bg-gradient-to-l from-background to-transparent" />
+
+        <div className="marquee-track flex gap-5">
+          {doubledItems.map((item, idx) => (
+            <Link
+              key={idx}
+              to="/our-works"
+              className="group relative shrink-0 w-64 rounded-xl border border-border bg-card overflow-hidden shadow-card transition-all hover:scale-[1.02] hover:border-primary/50"
             >
-              <div className="relative h-48 w-full overflow-hidden rounded-lg bg-muted">
+              {/* Image Container */}
+              <div className="relative h-40 w-full bg-black/40 overflow-hidden">
                 <img
-                  src={project.coverImage}
-                  alt={project.title}
-                  className="h-full w-full object-cover"
-                  onError={(e) => {
-                    // Fallback preview if image name differs
-                    (e.target as HTMLElement).style.display = "none";
-                  }}
+                  src={item.src}
+                  alt={item.title}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <span className="absolute top-3 left-3 rounded-md bg-deep/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary border border-border">
-                  {project.category}
+                <span
+                  className={`absolute top-2 left-2 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded text-white ${
+                    item.type === "Before" ? "bg-amber-600/90" : "bg-primary/90"
+                  }`}
+                >
+                  {item.type}
+                </span>
+                <span className="absolute bottom-2 right-2 text-[10px] font-semibold uppercase px-2 py-0.5 rounded bg-black/70 text-white/90 border border-white/10">
+                  {item.cat}
                 </span>
               </div>
-              <div className="mt-4 flex items-center justify-between">
-                <h3 className="text-base font-semibold uppercase text-foreground leading-tight">
-                  {project.title}
-                </h3>
-                <Layers className="size-4 text-primary shrink-0 ml-2" />
+
+              {/* Title Bar */}
+              <div className="p-3 bg-card border-t border-border/60">
+                <p className="text-xs font-bold uppercase truncate group-hover:text-primary transition-colors">
+                  {item.title}
+                </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
-
-      {/* Lightbox Modal / Full Folder View */}
-      {activeProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm">
-          <div className="max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-xl border border-border bg-card p-6 shadow-2xl">
-            <div className="flex items-center justify-between border-b border-border pb-4 mb-6">
-              <div>
-                <span className="text-xs font-bold uppercase text-primary">{activeProject.category}</span>
-                <h3 className="text-2xl uppercase font-bold text-foreground">{activeProject.title}</h3>
-              </div>
-              <button
-                onClick={() => setActiveProject(null)}
-                className="rounded-lg p-2 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
-                aria-label="Close modal"
-              >
-                <X className="size-6" />
-              </button>
-            </div>
-
-            <div className="grid gap-6 md:grid-cols-2">
-              {/* Before Images */}
-              <div>
-                <h4 className="mb-3 font-bold uppercase text-red-500 text-sm flex items-center gap-2">
-                  <span className="size-2 rounded-full bg-red-500"></span> Before Work
-                </h4>
-                <div className="space-y-3">
-                  {activeProject.beforeImages.map((img, i) => (
-                    <img
-                      key={i}
-                      src={img}
-                      alt="Before"
-                      className="w-full rounded-lg border border-border object-cover max-h-72"
-                    />
-                  ))}
-                </div>
-              </div>
-
-              {/* After Images */}
-              <div>
-                <h4 className="mb-3 font-bold uppercase text-emerald-500 text-sm flex items-center gap-2">
-                  <span className="size-2 rounded-full bg-emerald-500"></span> After Completion
-                </h4>
-                <div className="space-y-3">
-                  {activeProject.afterImages.map((img, i) => (
-                    <img
-                      key={i}
-                      src={img}
-                      alt="After"
-                      className="w-full rounded-lg border border-border object-cover max-h-72"
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

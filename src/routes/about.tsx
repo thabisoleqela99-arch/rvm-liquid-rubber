@@ -1,6 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ShieldCheck, HeartHandshake, HardHat, Phone, Users, Sparkles, Building2 } from "lucide-react";
 
+// Asset Import
+import ownerPic from "../assets/Owner-Picture.png";
+
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
@@ -67,6 +70,46 @@ function AboutPage() {
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
             RVM Trading and Consulting (trading as <strong>RVM Liquid Rubber</strong>) delivers premium waterproofing, plumbing, tiling, and interior refurbishments across greater Johannesburg.
           </p>
+        </div>
+      </section>
+
+      {/* Visual Showcase & Company Overview Section */}
+      <section className="border-b border-border bg-card py-16">
+        <div className="mx-auto max-w-6xl px-5 grid gap-12 lg:grid-cols-2 items-center">
+          
+          {/* Single Uncropped Owner Image Column */}
+          <div className="w-full flex justify-center items-center">
+            <img 
+              src={ownerPic} 
+              alt="RVM Owner / Management" 
+              className="w-full h-auto rounded-xl object-contain border border-border shadow-card max-h-[600px]"
+            />
+          </div>
+
+          {/* Details Column */}
+          <div>
+            <p className="eyebrow">About Our Practice</p>
+            <h2 className="mt-3 text-3xl uppercase">Hand-Applied Quality &amp; Total Protection</h2>
+            
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              <strong>RVM Trading and Consulting</strong> (trading as <strong>RVM Liquid Rubber</strong>) delivers premium waterproofing, dam sealing, plumbing, tiling, and interior refurbishments for residential and commercial properties across greater Johannesburg and surrounding areas.
+            </p>
+
+            <div className="mt-6 space-y-4 text-sm text-muted-foreground leading-relaxed">
+              <p>
+                <strong className="text-foreground">Our Expertise &amp; Standards:</strong> We specialize in high-durability liquid rubber waterproofing painted directly by hand for maximum coverage, backed by a 10-year guarantee. All products used are eco-friendly, fume-free, and SABS / BAA tested to meet full insurance standards.
+              </p>
+              
+              <p>
+                <strong className="text-foreground">Safety &amp; Compliance:</strong> Fully compliant with height-safety regulations, equipped with proper harnesses, helmets, safety goggles, and professional machinery for seamless interior and exterior remodeling.
+              </p>
+
+              <p>
+                <strong className="text-foreground">Driven by Integrity:</strong> Every project starts with dedication and care—our experienced, trusted teams go above and beyond to protect your home, ensure quality craftsmanship, and make a positive community impact.
+              </p>
+            </div>
+          </div>
+
         </div>
       </section>
 

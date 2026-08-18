@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ShieldCheck, HeartHandshake, HardHat, Phone, Users, Sparkles, Building2 } from "lucide-react";
+import { ShieldCheck, HeartHandshake, HardHat, Phone, Users, Sparkles, Building2, ShieldAlert, Droplet } from "lucide-react";
 
 // Asset Import
 import ownerPic from "../assets/Owner-Picture.png";
@@ -7,17 +7,17 @@ import ownerPic from "../assets/Owner-Picture.png";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — RVM Trading and Consulting t/a RVM Liquid Rubber" },
+      { title: "About Us — Your Local Liquid Rubber Genie at Your Service | RVM Liquid Rubber" },
       {
         name: "description",
         content:
-          "Learn about RVM Trading and Consulting t/a RVM Liquid Rubber. Dedicated to safety, SABS-tested waterproofing, interior remodeling, site prayer, and community outreach in Gauteng.",
+          "Your local liquid rubber genie at your service. Learn about RVM Trading and Consulting t/a RVM Liquid Rubber. Dedicated to safety, SABS-tested liquid rubber waterproofing, permanent damp removal, site prayer, and community outreach in Gauteng.",
       },
-      { property: "og:title", content: "About RVM Liquid Rubber & Consulting" },
+      { property: "og:title", content: "About RVM Liquid Rubber — Waterproofing & Damp Removal Specialists" },
       {
         property: "og:description",
         content:
-          "High safety standards, 10-year guarantees, structural integrity, and community initiatives like Doorway to Dignity across Johannesburg.",
+          "Your local liquid rubber genie at your service. High safety standards, 10-year guarantees, rising damp elimination, structural integrity, and community initiatives across Johannesburg.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/about" },
@@ -36,24 +36,24 @@ const values = [
   {
     icon: ShieldCheck,
     title: "10-Year Guarantee & SABS Products",
-    copy: "We exclusively utilize insurance-compliant, SABS-tested liquid rubber formulas backed by our 10-year waterproofing guarantee.",
+    copy: "We exclusively utilize insurance-compliant, SABS-tested liquid rubber formulas backed by our 10-year waterproofing warranty.",
+  },
+  {
+    icon: ShieldAlert,
+    title: "Permanent Damp & Moisture Removal",
+    copy: "Specialized chemical damp proofing, plaster stripping, salt efflorescence treatment, and anti-fungal barrier sealers for Johannesburg properties.",
   },
   {
     icon: Sparkles,
     title: "Spiritual Values & Integrity",
     copy: "Our work environment is anchored in trust, mutual respect, site safety checks, and daily prayer at job sites before work begins.",
   },
-  {
-    icon: Building2,
-    title: "Consultant-Verified Engineering",
-    copy: "For structural modifications and load-bearing walls, we work directly with engineering consultants to guarantee structural integrity before cutting.",
-  },
 ];
 
 const communityProjects = [
   "Doorway to Dignity community support & outreach initiatives",
   "Local feeding schemes and emergency food distribution support",
-  "Church venue refurbishments, structural waterproofing, and painting",
+  "Church venue refurbishments, structural waterproofing, and damp repair",
   "Local youth development and skills upliftment programs",
 ];
 
@@ -63,12 +63,16 @@ function AboutPage() {
       {/* Header */}
       <section className="border-b border-border bg-gradient-deep">
         <div className="mx-auto max-w-6xl px-5 py-20">
-          <p className="eyebrow">RVM Trading and Consulting</p>
-          <h1 className="mt-4 max-w-3xl text-4xl uppercase sm:text-5xl">
+          <div className="inline-block rounded-full bg-primary/10 border border-primary/30 px-4 py-1.5 mb-4">
+            <p className="eyebrow text-primary text-xs sm:text-sm font-bold tracking-widest uppercase">
+              ✨ Your local liquid rubber genie at your service
+            </p>
+          </div>
+          <h1 className="mt-2 max-w-3xl text-4xl uppercase sm:text-5xl font-black">
             Craftsmanship, Safety &amp; Purpose
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            RVM Trading and Consulting (trading as <strong>RVM Liquid Rubber</strong>) delivers premium waterproofing, plumbing, tiling, and interior refurbishments across greater Johannesburg.
+          <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+            RVM Trading and Consulting (trading as <strong>RVM Liquid Rubber</strong>) delivers premium 10-year guaranteed waterproofing, specialized damp removal, plumbing, tiling, and interior refurbishments across greater Johannesburg.
           </p>
         </div>
       </section>
@@ -88,16 +92,16 @@ function AboutPage() {
 
           {/* Details Column */}
           <div>
-            <p className="eyebrow">About Our Practice</p>
-            <h2 className="mt-3 text-3xl uppercase">Hand-Applied Quality &amp; Total Protection</h2>
+            <p className="eyebrow text-primary font-bold">About Our Practice</p>
+            <h2 className="mt-3 text-3xl uppercase font-black">Hand-Applied Quality &amp; Total Damp Protection</h2>
             
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              <strong>RVM Trading and Consulting</strong> (trading as <strong>RVM Liquid Rubber</strong>) delivers premium waterproofing, dam sealing, plumbing, tiling, and interior refurbishments for residential and commercial properties across greater Johannesburg and surrounding areas.
+              <strong>RVM Trading and Consulting</strong> (trading as <strong>RVM Liquid Rubber</strong>) is your local liquid rubber genie at your service — delivering premium waterproofing, rising damp elimination, plumbing, tiling, and interior refurbishments for residential and commercial properties across greater Johannesburg.
             </p>
 
             <div className="mt-6 space-y-4 text-sm text-muted-foreground leading-relaxed">
               <p>
-                <strong className="text-foreground">Our Expertise &amp; Standards:</strong> We specialize in high-durability liquid rubber waterproofing painted directly by hand for maximum coverage, backed by a 10-year guarantee. All products used are eco-friendly, fume-free, and SABS / BAA tested to meet full insurance standards.
+                <strong className="text-foreground">Waterproofing &amp; Damp Expertise:</strong> We specialize in high-durability liquid rubber waterproofing painted directly by hand for maximum coverage, backed by a 10-year written guarantee. We also eradicate persistent rising damp, peeling paint, and wall moisture using SABS / BAA tested sealers and chemical barriers.
               </p>
               
               <p>
@@ -117,22 +121,26 @@ function AboutPage() {
       <section className="mx-auto max-w-6xl px-5 py-20">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <p className="eyebrow">Operational Standards</p>
-            <h2 className="mt-3 text-3xl uppercase">Honest Pricing &amp; Certified Scope</h2>
+            <p className="eyebrow text-primary font-bold">Operational Standards</p>
+            <h2 className="mt-3 text-3xl uppercase font-black">Honest Pricing &amp; Certified Scope</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              We focus on interior remodeling, bathroom updates, tiling, plumbing, and structural waterproofing for residential and commercial spaces rather than building ground-up houses from scratch.
+              We focus on interior remodeling, permanent rising damp removal, bathroom updates, tiling, plumbing, and structural roof waterproofing for residential and commercial spaces rather than building ground-up houses from scratch.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              To ensure complete pricing accuracy, we prioritize thorough <strong>on-site assessments</strong> prior to issuing final itemized quotes. If an interior modification involves weight-bearing pillars or structural walls, we bring in certified structural consultants to verify safety before execution.
+              To ensure complete pricing accuracy and eliminate surprise costs, we prioritize thorough <strong>on-site assessments</strong> prior to issuing final itemized quotes. If an interior modification involves weight-bearing pillars or structural walls, we bring in certified structural consultants to verify safety before execution.
             </p>
           </div>
 
           <div className="rounded-xl border border-border bg-card p-8 shadow-card">
-            <h3 className="text-xl uppercase font-semibold text-primary mb-4">Our Core Scope</h3>
+            <h3 className="text-xl uppercase font-bold text-primary mb-4">Our Core Scope</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
                 <ShieldCheck className="size-4 text-primary shrink-0" />
                 Roof &amp; wall liquid rubber waterproofing (10-Year Guarantee)
+              </li>
+              <li className="flex items-center gap-2">
+                <ShieldAlert className="size-4 text-primary shrink-0" />
+                Permanent damp removal, chemical DPC injection &amp; salt treatment
               </li>
               <li className="flex items-center gap-2">
                 <ShieldCheck className="size-4 text-primary shrink-0" />
@@ -155,15 +163,15 @@ function AboutPage() {
       <section className="border-y border-border bg-deep py-20">
         <div className="mx-auto max-w-6xl px-5">
           <div className="text-center">
-            <p className="eyebrow">What Drives Us</p>
-            <h2 className="mt-3 text-3xl uppercase">Company Values &amp; Workplace Culture</h2>
+            <p className="eyebrow text-primary font-bold">What Drives Us</p>
+            <h2 className="mt-3 text-3xl uppercase font-black">Company Values &amp; Workplace Culture</h2>
           </div>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v) => (
               <div key={v.title} className="rounded-lg border border-border bg-card p-6 shadow-card">
                 <v.icon className="size-6 text-primary" aria-hidden="true" />
-                <h3 className="mt-4 text-base uppercase font-semibold">{v.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{v.copy}</p>
+                <h3 className="mt-4 text-base uppercase font-bold">{v.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{v.copy}</p>
               </div>
             ))}
           </div>
@@ -174,10 +182,10 @@ function AboutPage() {
       <section className="mx-auto max-w-6xl px-5 py-20">
         <div className="grid gap-10 lg:grid-cols-2 items-center">
           <div>
-            <p className="eyebrow">Giving Back</p>
-            <h2 className="mt-3 text-3xl uppercase">Community &amp; Outreach Initiatives</h2>
+            <p className="eyebrow text-primary font-bold">Giving Back</p>
+            <h2 className="mt-3 text-3xl uppercase font-black">Community &amp; Outreach Initiatives</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              We believe business success should directly uplift surrounding communities. Beyond commercial operations, RVM Liquid Rubber actively participates in social development and venue refurbishments.
+              We believe business success should directly uplift surrounding communities. Beyond commercial operations, RVM Liquid Rubber actively participates in social development, community venue refurbishments, and moisture protection for local facilities.
             </p>
             <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
               {communityProjects.map((item) => (
@@ -191,8 +199,8 @@ function AboutPage() {
 
           <div className="rounded-xl border border-border bg-gradient-accent p-8 text-primary-foreground shadow-lift">
             <Users className="size-8 text-primary-foreground mb-4" />
-            <h3 className="text-2xl uppercase">Build with Purpose</h3>
-            <p className="mt-2 text-sm text-primary-foreground/85">
+            <h3 className="text-2xl uppercase font-black">Build with Purpose</h3>
+            <p className="mt-2 text-sm text-primary-foreground/90 leading-relaxed">
               When you hire RVM Liquid Rubber, you support safe workplace practices, ethical craftsmanship, and local community feeding and dignity programs.
             </p>
             <div className="mt-6">
@@ -207,7 +215,10 @@ function AboutPage() {
       {/* CTA */}
       <section className="border-t border-border bg-deep py-16 text-center">
         <div className="mx-auto max-w-4xl px-5">
-          <h2 className="text-3xl uppercase">Need a Professional Site Assessment?</h2>
+          <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">
+            Your local liquid rubber genie at your service
+          </p>
+          <h2 className="text-3xl uppercase font-black">Need a Professional Damp or Roof Assessment?</h2>
           <p className="mt-3 text-muted-foreground">
             Call <strong>079 285 9461</strong> or email <strong>info@rvmconsulting.co.za</strong> to schedule an on-site visit.
           </p>

@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Building2, Droplets, Home, Layers, ShieldCheck, Wrench, Bath, Hammer, HardHat, Paintbrush } from "lucide-react";
+import { Building2, Droplets, Home, Layers, ShieldCheck, Wrench, Bath, Hammer, HardHat, Paintbrush, ShieldAlert } from "lucide-react";
 
 import serviceCommercial from "@/assets/service-commercial.jpg";
 import serviceResidential from "@/assets/service-residential.jpg";
@@ -14,17 +14,17 @@ import job3After from "@/assets/Job3-After.jpg";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Your Local Liquid Rubber Genie at Your Service | RVM Liquid Rubber" },
+      { title: "Services — Waterproofing, Damp Removal & Renovation | RVM Liquid Rubber" },
       {
         name: "description",
         content:
-          "Your local liquid rubber genie at your service. SABS-tested liquid rubber waterproofing with 10-year guarantees, interior remodeling, ceiling repairs, exterior painting, and structural refurbishments across Johannesburg.",
+          "Your local liquid rubber genie at your service. SABS-tested liquid rubber waterproofing (10-year guarantee), specialized damp removal, rising damp treatment, exterior painting, and structural refurbishments across Johannesburg.",
       },
-      { property: "og:title", content: "Waterproofing & Renovation Services — RVM Liquid Rubber" },
+      { property: "og:title", content: "Waterproofing & Advanced Damp Removal Services — RVM Liquid Rubber" },
       {
         property: "og:description",
         content:
-          "Official 10-year liquid rubber guarantee, interior remodeling, plumbing, tiling, ceiling installation, and structural property refurbishments. Your local liquid rubber genie at your service.",
+          "Official 10-year liquid rubber guarantee, permanent damp removal, rising damp chemical barriers, interior remodeling, plumbing, and structural property refurbishments.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/services" },
@@ -41,6 +41,11 @@ const coreServices = [
     copy: "SABS-tested, highly elastic liquid rubber membrane application for flat concrete slabs, sheet metal roofs, parapet walls, and box gutters. Includes high-pressure surface cleaning, flashing repairs, and multi-layer coating backed by a written 10-year warranty.",
   },
   {
+    icon: ShieldAlert,
+    title: "Specialized Damp Removal & Moisture Proofing",
+    copy: "Permanent treatment for rising damp, lateral moisture penetration, and salt efflorescence. Includes plaster stripping, chemical damp-proof course (DPC) injections, anti-fungal wall treatments, and protective waterproofing sealers.",
+  },
+  {
     icon: Home,
     title: "Roof Sealing & Leak Isolation",
     copy: "Comprehensive roof restoration and leak detection for residential and commercial structures. We isolate thermal expansion cracks, seal rusted sheet joints, treat tile alignment, and apply protective weather-barrier roof coatings.",
@@ -48,7 +53,7 @@ const coreServices = [
   {
     icon: Paintbrush,
     title: "Exterior & Interior Wall Painting",
-    copy: "Complete surface preparation, crack sealing, and high-durability weather-resistant painting. Designed to protect exterior masonry from harsh Gauteng weather while delivering flawless interior color coat applications.",
+    copy: "Complete surface preparation, crack sealing, damp-resistant primers, and high-durability weather-resistant painting. Designed to protect exterior masonry from harsh Gauteng weather while delivering flawless interior color applications.",
   },
   {
     icon: Hammer,
@@ -68,7 +73,7 @@ const coreServices = [
   {
     icon: Wrench,
     title: "Plumbing & Sanitary Installations",
-    copy: "Sanitary fixture fitting, pipework rerouting, rising damp treatment, drainage system upgrades, and non-destructive water leak detection.",
+    copy: "Sanitary fixture fitting, pipework rerouting, drainage system upgrades, and non-destructive subterranean water leak detection.",
   },
   {
     icon: HardHat,
@@ -113,10 +118,10 @@ function ServicesPage() {
             </p>
           </div>
           <h1 className="mt-2 max-w-3xl text-4xl uppercase sm:text-5xl font-black">
-            Waterproofing &amp; Comprehensive Remodeling Services
+            Waterproofing, Damp Removal &amp; Remodeling
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            Delivering 10-year guaranteed liquid rubber waterproofing, roof leak isolation, interior remodeling, ceiling board repairs, and full property refurbishments across Gauteng.
+            Delivering 10-year guaranteed liquid rubber waterproofing, permanent damp removal, roof leak isolation, ceiling board repairs, and full property refurbishments across Gauteng.
           </p>
         </div>
       </section>
@@ -124,7 +129,7 @@ function ServicesPage() {
       {/* Service Cards Grid */}
       <section className="mx-auto max-w-6xl px-5 py-20">
         <p className="eyebrow text-primary font-bold mb-2">Our Capabilities</p>
-        <h2 className="text-3xl uppercase font-black mb-10">Expert Property Solutions</h2>
+        <h2 className="text-3xl uppercase font-black mb-10">Expert Property &amp; Moisture Solutions</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {coreServices.map((s) => (
             <div key={s.title} className="rounded-lg border border-border bg-card p-6 shadow-card flex flex-col justify-between">
@@ -144,7 +149,7 @@ function ServicesPage() {
           <p className="eyebrow">Accurate Pricing &amp; Engineering Standards</p>
           <h2 className="mt-2 text-2xl uppercase sm:text-3xl font-bold">On-Site Inspection Required Before Quotation</h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground leading-relaxed">
-            To guarantee precise pricing and eliminate hidden costs, our team conducts thorough physical site assessments prior to delivering itemized quotes. For weight-bearing wall alterations and structural pillar modifications, we consult certified structural engineers.
+            To guarantee precise pricing and eliminate hidden costs, our team conducts thorough physical site assessments prior to delivering itemized quotes for waterproofing, damp removal, and structural work. For weight-bearing wall alterations, we consult certified structural engineers.
           </p>
         </div>
       </section>
@@ -156,7 +161,7 @@ function ServicesPage() {
             <p className="eyebrow text-primary font-bold mb-2">Proven Results</p>
             <h2 className="text-3xl uppercase font-black">Recent Before &amp; After Transformations</h2>
             <p className="mt-2 text-muted-foreground">
-              Real transformations across our roof waterproofing, painting, and structural restoration jobs in Greater Johannesburg.
+              Real transformations across our roof waterproofing, damp removal, painting, and structural restoration jobs in Greater Johannesburg.
             </p>
           </div>
           <div className="mt-10 grid gap-8 grid-cols-1 lg:grid-cols-3">
@@ -199,9 +204,9 @@ function ServicesPage() {
         <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">
           Your local liquid rubber genie at your service
         </p>
-        <h2 className="text-3xl uppercase font-black">Ready for an On-Site Assessment?</h2>
+        <h2 className="text-3xl uppercase font-black">Ready to Banish Leaks &amp; Wall Damp?</h2>
         <p className="mt-4 max-w-xl mx-auto text-muted-foreground">
-          Contact our team today to schedule an inspection for waterproofing, roof sealing, ceiling restoration, painting, or interior remodeling.
+          Contact our team today to schedule an on-site inspection for waterproofing, damp removal, roof sealing, ceiling restoration, or painting.
         </p>
         <div className="mt-8 flex justify-center gap-4 flex-wrap">
           <a href="tel:0792859461" className="btn-primary">

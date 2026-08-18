@@ -5,12 +5,20 @@ import { Phone, Mail, MapPin, Send, MessageCircle, Clock, CheckCircle2 } from "l
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us & Request a Quote — RVM Trading and Consulting" },
+      { title: "Contact Us & Request a Quote — Your Local Liquid Rubber Genie at Your Service" },
       {
         name: "description",
         content:
-          "Get in touch with RVM for roof waterproofing, painting, remodeling, and repairs in Johannesburg. Chat directly on WhatsApp or submit a quote request.",
+          "Your local liquid rubber genie at your service. Get in touch with RVM for 10-year guaranteed roof waterproofing, permanent damp removal, rising damp treatments, painting, remodeling, and repairs in Johannesburg.",
       },
+      { property: "og:title", content: "Contact RVM Liquid Rubber — Waterproofing & Damp Removal" },
+      {
+        property: "og:description",
+        content:
+          "Chat directly on WhatsApp or submit a formal quote request for liquid rubber waterproofing, damp proofing, leak detection, and property refurbishments across Gauteng.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
   }),
@@ -38,10 +46,14 @@ export function ContactPage() {
       {/* Hero Header */}
       <section className="border-b border-border bg-gradient-deep py-16 text-center">
         <div className="mx-auto max-w-4xl px-5">
-          <p className="eyebrow">Get In Touch</p>
-          <h1 className="mt-3 text-4xl font-black uppercase sm:text-5xl">Contact RVM</h1>
-          <p className="mt-4 text-muted-foreground text-lg">
-            Request an itemized quotation online or message us directly on WhatsApp for immediate assistance.
+          <div className="inline-block rounded-full bg-primary/10 border border-primary/30 px-4 py-1.5 mb-4">
+            <p className="eyebrow text-primary text-xs sm:text-sm font-bold tracking-widest uppercase">
+              ✨ Your local liquid rubber genie at your service
+            </p>
+          </div>
+          <h1 className="mt-2 text-4xl font-black uppercase sm:text-5xl">Contact RVM</h1>
+          <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
+            Request an itemized quotation online or message us directly on WhatsApp for immediate assistance with roof waterproofing, damp removal, or property refurbishments.
           </p>
         </div>
       </section>
@@ -63,8 +75,8 @@ export function ContactPage() {
                     Fastest Response
                   </span>
                   <h2 className="text-xl font-bold uppercase mt-1">Chat on WhatsApp</h2>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    Connect directly with our team to share photo inquiries, roof measurements, or request quick callouts.
+                  <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                    Connect directly with our team to share photos of wall damp, roof leaks, or request quick callouts.
                   </p>
                 </div>
               </div>
@@ -114,7 +126,7 @@ export function ContactPage() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground uppercase font-semibold">Service Coverage</p>
-                  <p className="text-sm font-medium">Greater Johannesburg & Gauteng Area</p>
+                  <p className="text-sm font-medium">Greater Johannesburg &amp; Gauteng Area</p>
                 </div>
               </div>
 
@@ -135,9 +147,12 @@ export function ContactPage() {
           {/* Right Column: Web Quote Request Form */}
           <div className="lg:col-span-7">
             <div className="rounded-xl border border-border bg-card p-8 shadow-card">
+              <p className="text-xs font-bold uppercase tracking-widest text-primary mb-1">
+                Your local liquid rubber genie at your service
+              </p>
               <h2 className="text-2xl font-bold uppercase">Request a Formal Quote</h2>
-              <p className="text-sm text-muted-foreground mt-1 mb-6">
-                Fill in your project details below and our technical estimators will contact you to schedule a site inspection.
+              <p className="text-sm text-muted-foreground mt-1 mb-6 leading-relaxed">
+                Fill in your project details below and our technical estimators will contact you to schedule an on-site inspection.
               </p>
 
               {formSubmitted ? (
@@ -145,7 +160,7 @@ export function ContactPage() {
                   <CheckCircle2 className="size-12 text-primary mx-auto" />
                   <h3 className="text-xl font-bold uppercase">Quote Request Received!</h3>
                   <p className="text-sm text-muted-foreground">
-                    Thank you. One of our specialists will reach out to you within 24 hours.
+                    Thank you. One of our waterproofing and damp removal specialists will reach out to you within 24 hours.
                   </p>
                 </div>
               ) : (
@@ -195,10 +210,11 @@ export function ContactPage() {
                   <div>
                     <label className="block text-xs font-semibold uppercase mb-1.5">Service Required</label>
                     <select className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none">
-                      <option value="roofing">Roof Waterproofing & Liquid Rubber</option>
-                      <option value="remodelling">Remodeling & Structural Repairs</option>
-                      <option value="painting">Interior & Exterior Painting</option>
-                      <option value="ceiling">Ceiling Repairs & Installation</option>
+                      <option value="damp">Damp Removal &amp; Moisture Proofing</option>
+                      <option value="roofing">Roof Waterproofing &amp; Liquid Rubber</option>
+                      <option value="remodelling">Remodeling &amp; Structural Repairs</option>
+                      <option value="painting">Interior &amp; Exterior Painting</option>
+                      <option value="ceiling">Ceiling Repairs &amp; Installation</option>
                       <option value="refurbishment">Full Property Refurbishment</option>
                       <option value="other">Other / General Inquiry</option>
                     </select>
@@ -209,7 +225,7 @@ export function ContactPage() {
                     <textarea
                       rows={4}
                       required
-                      placeholder="Describe the leak, roof type, or scope of home improvement needed..."
+                      placeholder="Describe the leak, wall damp issues, roof type, or scope of home improvement needed..."
                       className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none"
                     ></textarea>
                   </div>

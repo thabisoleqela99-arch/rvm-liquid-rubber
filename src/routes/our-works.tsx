@@ -3,18 +3,26 @@ import { useState } from "react";
 import { 
   Hammer, Paintbrush, Home, Building2, Layers, Wrench, Phone, 
   ArrowRight, CheckCircle2, History, ChevronLeft, ChevronRight, 
-  Maximize2, X, ChevronDown, ChevronUp 
+  Maximize2, X, ChevronDown, ChevronUp, ShieldAlert
 } from "lucide-react";
 
 export const Route = createFileRoute("/our-works")({
   head: () => ({
     meta: [
-      { title: "Our Works & Completed Projects — RVM Trading and Consulting" },
+      { title: "Our Works & Completed Projects — Your Local Liquid Rubber Genie at Your Service" },
       {
         name: "description",
         content:
-          "Explore our gallery of completed waterproofing, roofing, remodeling, painting, ceiling, and refurbishment projects across Johannesburg.",
+          "Your local liquid rubber genie at your service. Explore our gallery of completed waterproofing, permanent damp removal, roofing, remodeling, painting, ceiling, and refurbishment projects across Johannesburg.",
       },
+      { property: "og:title", content: "Our Works & Completed Projects — RVM Liquid Rubber" },
+      {
+        property: "og:description",
+        content:
+          "Explore our gallery of 10-year guaranteed liquid rubber waterproofing, rising damp elimination, roof restoration, and property remodeling projects across Greater Johannesburg.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/our-works" },
     ],
     links: [{ rel: "canonical", href: "/our-works" }],
   }),
@@ -28,8 +36,8 @@ const getAsset = (filePath: string) => assets[`../assets/${filePath}`] || "";
 // Category list order with Major Projects last
 const categories = [
   { id: "remodelling", label: "Remodeling", icon: Hammer },
-  { id: "painting", label: "Painting", icon: Paintbrush },
-  { id: "roofing", label: "Roofing", icon: Home },
+  { id: "painting", label: "Painting & Damp", icon: Paintbrush },
+  { id: "roofing", label: "Roofing & Waterproofing", icon: Home },
   { id: "ceiling", label: "Ceiling", icon: Layers },
   { id: "refurbishment", label: "Refurbishment", icon: Wrench },
   { id: "major-projects", label: "Major Projects", icon: Building2 },
@@ -358,10 +366,10 @@ function OurWorksPage() {
     painting: [
       {
         id: "paint-1",
-        title: "Exterior & Interior Wall Painting",
+        title: "Exterior & Interior Wall Painting with Damp Treatment",
         location: "Greater Johannesburg",
         description:
-          "Full surface preparation, crack filling, and high-durability weather-resistant exterior & interior painting coat application.",
+          "Full surface preparation, rising damp chemical treatment, crack filling, damp-resistant priming, and high-durability weather-resistant coat application.",
         beforeImages: [
           getAsset("Painting/Project 1/Painting-Before-1.jpeg"),
           getAsset("Painting/Project 1/Painting-Before-2.jpeg"),
@@ -382,7 +390,7 @@ function OurWorksPage() {
         title: "Residential Wall & Surface Painting",
         location: "Greater Johannesburg",
         description:
-          "Professional interior and exterior painting restoration using premium protective paint to renew faded and weathered surfaces.",
+          "Professional interior and exterior painting restoration using premium protective paint and moisture barrier primers to renew faded and weathered surfaces.",
         beforeImages: [
           getAsset("Painting/Project 2/Paint-Before-1.jpeg"),
           getAsset("Painting/Project 2/Paint-Before-2.jpeg"),
@@ -395,10 +403,10 @@ function OurWorksPage() {
       },
       {
         id: "paint-3",
-        title: "Interior Wall Preparation & Coating",
+        title: "Interior Wall Preparation & Damp Barrier Coating",
         location: "Greater Johannesburg",
         description:
-          "Precision wall priming and premium color coat painting for interior living spaces, eliminating stains and delivering an even finish.",
+          "Precision wall priming, salt efflorescence treatment, and premium color coat painting for interior living spaces, eliminating stains and delivering an even finish.",
         beforeImages: [
           getAsset("Painting/Project 3/Painting-Before-1.jpeg"),
           getAsset("Painting/Project 3/Painting-Before-2.jpeg"),
@@ -558,10 +566,10 @@ function OurWorksPage() {
     refurbishment: [
       {
         id: "refurbishment-1",
-        title: "Comprehensive Property Refurbishment",
+        title: "Comprehensive Property Refurbishment & Damp Proofing",
         location: "Greater Johannesburg",
         description:
-          "Complete property revitalization involving exterior wall repairs, surface preparation, modern plastering, and weather-resistant protective finishing.",
+          "Complete property revitalization involving exterior wall repairs, rising damp elimination, surface preparation, modern plastering, and weather-resistant protective finishing.",
         beforeImages: [
           getAsset("Refurbishments/Project 1/Refurbishment-Before-1.jpeg"),
           getAsset("Refurbishments/Project 1/Refurbishment-Before-2.jpeg"),
@@ -580,7 +588,7 @@ function OurWorksPage() {
         title: "Full Residential & Commercial Renovation",
         location: "Greater Johannesburg",
         description:
-          "Extensive multi-phase structural overhaul including ground excavation, plumbing & drainage restructuring, custom kitchen cabinet fitting, floor tiling, ceiling installation, and full interior/exterior repainting.",
+          "Extensive multi-phase structural overhaul including ground excavation, plumbing & drainage restructuring, rising damp treatment, custom kitchen cabinet fitting, floor tiling, ceiling installation, and full interior/exterior repainting.",
         beforeImages: [
           getAsset("Major Works/Big-Project-Before-1.jpeg"),
           getAsset("Major Works/Big-Project-Before-2.jpeg"),
@@ -617,10 +625,14 @@ function OurWorksPage() {
     <div>
       <section className="border-b border-border bg-gradient-deep py-16">
         <div className="mx-auto max-w-6xl px-5 text-center">
-          <p className="eyebrow">Portfolio Showcase</p>
-          <h1 className="mt-3 text-4xl font-black uppercase sm:text-5xl">Our Works</h1>
-          <p className="mt-4 mx-auto max-w-2xl text-lg text-muted-foreground">
-            Explore our completed craftsmanship across 6 core divisions—from 10-year guaranteed roof waterproofing to complete interior and patio remodeling.
+          <div className="inline-block rounded-full bg-primary/10 border border-primary/30 px-4 py-1.5 mb-4">
+            <p className="eyebrow text-primary text-xs sm:text-sm font-bold tracking-widest uppercase">
+              ✨ Your local liquid rubber genie at your service
+            </p>
+          </div>
+          <h1 className="mt-2 text-4xl font-black uppercase sm:text-5xl">Our Works</h1>
+          <p className="mt-4 mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed">
+            Explore our completed craftsmanship across 6 core divisions—from 10-year guaranteed roof waterproofing and permanent damp removal to complete interior and patio remodeling.
           </p>
         </div>
       </section>
@@ -695,11 +707,15 @@ function OurWorksPage() {
         })}
       </section>
 
+      {/* CTA */}
       <section className="border-t border-border bg-deep py-16 text-center">
         <div className="mx-auto max-w-4xl px-5">
-          <h2 className="text-3xl uppercase font-black">Ready to Start Your Project?</h2>
+          <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">
+            Your local liquid rubber genie at your service
+          </p>
+          <h2 className="text-3xl uppercase font-black">Ready to Banish Leaks &amp; Damp From Your Property?</h2>
           <p className="mt-3 text-muted-foreground">
-            Contact us today for a professional on-site assessment and itemized quotation.
+            Contact us today for a professional on-site moisture/roof assessment and itemized quotation.
           </p>
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
             <a href="tel:0792859461" className="btn-primary">

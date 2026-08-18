@@ -13,13 +13,13 @@ export const Route = createFileRoute("/our-works")({
       {
         name: "description",
         content:
-          "Your local liquid rubber genie at your service. Explore our gallery of completed waterproofing, permanent damp removal, roofing, remodeling, painting, ceiling, and refurbishment projects across Johannesburg.",
+          "Your local liquid rubber genie at your service. Explore our gallery of completed waterproofing, permanent damp removal, roofing, remodeling, painting, ceiling, and refurbishment projects across South Africa.",
       },
       { property: "og:title", content: "Our Works & Completed Projects — RVM Liquid Rubber" },
       {
         property: "og:description",
         content:
-          "Explore our gallery of 10-year guaranteed liquid rubber waterproofing, rising damp elimination, roof restoration, and property remodeling projects across Greater Johannesburg.",
+          "Explore our gallery of 10-year guaranteed liquid rubber waterproofing, rising damp elimination, roof restoration, and property remodeling projects across South Africa.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/our-works" },
@@ -270,7 +270,7 @@ function OurWorksPage() {
       {
         id: "remodel-1",
         title: "Patio, Bulkhead & Exterior Remodel",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Complete structural refurbishment including patio tile laying, stair paving, ceiling and bulkhead plastering, and protective dark exterior painting.",
         beforeImages: [
@@ -291,7 +291,7 @@ function OurWorksPage() {
       {
         id: "remodel-2",
         title: "Ceiling Repair & Bathroom Remodel",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Full tear-down and replacement of damaged ceiling boards, cornices, downlight installation, along with modern wall tiling and interior finishing.",
         beforeImages: [
@@ -316,7 +316,7 @@ function OurWorksPage() {
       {
         id: "remodel-3",
         title: "Interior & Wall Structure Remodel",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Comprehensive structural preparation, wall repair, and interior remodeling to modernize room layouts and surface finishes.",
         beforeImages: [
@@ -333,7 +333,7 @@ function OurWorksPage() {
       {
         id: "remodel-4",
         title: "Structural Masonry & Surface Remodel",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Targeted surface restoration and structural remodeling, overcoming weathered foundations to deliver clean, modern exterior and interior finishes.",
         beforeImages: [
@@ -350,7 +350,7 @@ function OurWorksPage() {
       {
         id: "remodel-5",
         title: "Property Refurbishment & Interior Overhaul",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Complete property remodeling and restoration focused on restoring surface structural integrity and delivering a pristine, contemporary final finish.",
         beforeImages: [
@@ -367,7 +367,7 @@ function OurWorksPage() {
       {
         id: "paint-1",
         title: "Exterior & Interior Wall Painting with Damp Treatment",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Full surface preparation, rising damp chemical treatment, crack filling, damp-resistant priming, and high-durability weather-resistant coat application.",
         beforeImages: [
@@ -388,7 +388,7 @@ function OurWorksPage() {
       {
         id: "paint-2",
         title: "Residential Wall & Surface Painting",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Professional interior and exterior painting restoration using premium protective paint and moisture barrier primers to renew faded and weathered surfaces.",
         beforeImages: [
@@ -404,7 +404,7 @@ function OurWorksPage() {
       {
         id: "paint-3",
         title: "Interior Wall Preparation & Damp Barrier Coating",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Precision wall priming, salt efflorescence treatment, and premium color coat painting for interior living spaces, eliminating stains and delivering an even finish.",
         beforeImages: [
@@ -423,7 +423,7 @@ function OurWorksPage() {
       {
         id: "roofing-1",
         title: "10-Year Guaranteed Liquid Rubber Roof Waterproofing",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Full roof restoration including high-pressure surface cleaning, repair of damaged flashing, and application of multi-layer RVM liquid rubber waterproofing with a 10-year warranty.",
         beforeImages: [
@@ -442,7 +442,7 @@ function OurWorksPage() {
       {
         id: "roofing-2",
         title: "Residential Roof Coating & Leak Prevention",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Comprehensive leak isolation, structural tile/sheet sealing, and application of protective weather-barrier roof coating.",
         beforeImages: [
@@ -463,7 +463,7 @@ function OurWorksPage() {
       {
         id: "roofing-3",
         title: "Commercial Roof Surface Coating",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Targeted roof substrate sealing and multi-layer liquid coating to restore weather barrier integrity and eliminate water pooling.",
         beforeImages: [
@@ -479,7 +479,7 @@ function OurWorksPage() {
       {
         id: "roofing-4",
         title: "Roof Sealing & Waterproof Refurbishment",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Comprehensive joint sealing, waterproofing application, and protective roof painting to ensure long-term structural weather protection.",
         beforeImages: [
@@ -497,7 +497,7 @@ function OurWorksPage() {
       {
         id: "roofing-5",
         title: "Residential Roof Refurbishment & Coating",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Full roof restoration including leak repair and weatherproofing application for long-lasting structural defense.",
         beforeImages: [
@@ -512,7 +512,7 @@ function OurWorksPage() {
       {
         id: "ceiling-1",
         title: "Water Damage Repair & Ceiling Replacement",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Complete removal of water-damaged ceiling boards, structural brandering repair, new rhino board installation, skim plastering, and cornicing.",
         beforeImages: [
@@ -532,7 +532,7 @@ function OurWorksPage() {
       {
         id: "ceiling-2",
         title: "Flush Plaster Ceiling Installation & Lighting",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Precision board alignment, skim coat plastering, modern cornice fitting, and integrated downlight layout for living quarters.",
         beforeImages: [
@@ -549,7 +549,7 @@ function OurWorksPage() {
       {
         id: "ceiling-3",
         title: "Interior Ceiling Board Restoration",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Structural ceiling framework reinforcement, board replacement, seamless skim coat plastering, and decorative cornice finishing.",
         beforeImages: [
@@ -567,7 +567,7 @@ function OurWorksPage() {
       {
         id: "refurbishment-1",
         title: "Comprehensive Property Refurbishment & Damp Proofing",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Complete property revitalization involving exterior wall repairs, rising damp elimination, surface preparation, modern plastering, and weather-resistant protective finishing.",
         beforeImages: [
@@ -586,7 +586,7 @@ function OurWorksPage() {
       {
         id: "major-1",
         title: "Full Residential & Commercial Renovation",
-        location: "Greater Johannesburg",
+        location: "South Africa",
         description:
           "Extensive multi-phase structural overhaul including ground excavation, plumbing & drainage restructuring, rising damp treatment, custom kitchen cabinet fitting, floor tiling, ceiling installation, and full interior/exterior repainting.",
         beforeImages: [
@@ -720,7 +720,11 @@ function OurWorksPage() {
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
             <a href="tel:0792859461" className="btn-primary">
               <Phone className="size-4" aria-hidden="true" />
-              Call 079 285 9461
+              Call Ralf (079 285 9461)
+            </a>
+            <a href="tel:0797973960" className="btn-primary">
+              <Phone className="size-4" aria-hidden="true" />
+              Call Earl (079 797 3960)
             </a>
             <Link to="/contact" className="btn-outline flex items-center gap-2">
               Request a Quote <ArrowRight className="size-4" />

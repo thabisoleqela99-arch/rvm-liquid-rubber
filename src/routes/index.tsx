@@ -11,17 +11,17 @@ import serviceCommercial from "@/assets/service-commercial.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "RVM Liquid Rubber — Waterproofing & Damp Removal Specialists in Johannesburg" },
+      { title: "RVM Liquid Rubber — Waterproofing & Damp Removal Specialists Nationwide" },
       {
         name: "description",
         content:
-          "Your local liquid rubber genie at your service. RVM offers 10-year guaranteed roof waterproofing, permanent damp removal, rising damp treatment, and home improvement across Johannesburg.",
+          "Your local liquid rubber genie at your service. RVM offers 10-year guaranteed roof waterproofing, permanent damp removal, rising damp treatment, and home improvement across South Africa.",
       },
       { property: "og:title", content: "RVM Liquid Rubber — Waterproofing & Advanced Damp Removal" },
       {
         property: "og:description",
         content:
-          "Liquid rubber roof waterproofing, specialized damp removal, rising damp sealing, leak detection, and property maintenance across Johannesburg. Your local liquid rubber genie at your service.",
+          "Liquid rubber roof waterproofing, specialized damp removal, rising damp sealing, leak detection, and property maintenance nationwide. Your local liquid rubber genie at your service.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -39,12 +39,10 @@ export const Route = createFileRoute("/")({
           email: "info@rvmconsulting.co.za",
           telephone: "079 285 9461",
           description:
-            "Roof waterproofing, permanent damp removal, rising damp treatment, and structural home improvement specialists in Johannesburg, South Africa.",
-          areaServed: "Johannesburg, Gauteng, South Africa",
+            "Roof waterproofing, permanent damp removal, rising damp treatment, and structural home improvement specialists across South Africa.",
+          areaServed: "South Africa",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Johannesburg",
-            addressRegion: "Gauteng",
             addressCountry: "ZA",
           },
         }),
@@ -89,17 +87,16 @@ const extras = [
   },
 ];
 
-const areas = [
-  "Sandton",
-  "Randburg",
-  "Roodepoort",
-  "Midrand",
-  "Soweto",
-  "Bedfordview",
-  "Alberton",
-  "Fourways",
-  "Rosebank",
-  "Kempton Park",
+const regions = [
+  "Gauteng",
+  "KwaZulu-Natal",
+  "Western Cape",
+  "Eastern Cape",
+  "Free State",
+  "Mpumalanga",
+  "Limpopo",
+  "North West",
+  "Northern Cape",
 ];
 
 function Index() {
@@ -109,7 +106,7 @@ function Index() {
       <section className="relative overflow-hidden">
         <img
           src={heroRoof}
-          alt="RVM Liquid Rubber technician applying protective coating on a Johannesburg rooftop"
+          alt="RVM Liquid Rubber technician applying protective coating on a rooftop"
           width={1600}
           height={1008}
           className="absolute inset-0 size-full object-cover opacity-45"
@@ -127,13 +124,20 @@ function Index() {
             Waterproofing, Damp Removal &amp; Home Improvement
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed">
-            Stop peeling paint, blistering plaster, and roof leaks for good. RVM Liquid Rubber banishes rising damp and protects Johannesburg properties with written 10-year guarantees.
+            Stop peeling paint, blistering plaster, and roof leaks for good. RVM Liquid Rubber banishes rising damp and protects properties nationwide with written 10-year guarantees.
           </p>
-          <div className="mt-9 flex flex-wrap gap-4 items-center">
-            <a href="tel:0792859461" className="btn-primary">
-              <Phone className="size-4" aria-hidden="true" />
-              Call 079 285 9461
-            </a>
+          
+          <div className="mt-9 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+            <div className="flex flex-wrap gap-3">
+              <a href="tel:0792859461" className="btn-primary">
+                <Phone className="size-4" aria-hidden="true" />
+                Ralf: 079 285 9461
+              </a>
+              <a href="tel:0797973960" className="btn-primary">
+                <Phone className="size-4" aria-hidden="true" />
+                Earl: 079 797 3960
+              </a>
+            </div>
             <a
               href="mailto:info@rvmconsulting.co.za"
               className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors"
@@ -141,9 +145,10 @@ function Index() {
               info@rvmconsulting.co.za
             </a>
           </div>
+
           <dl className="mt-14 grid max-w-2xl grid-cols-2 gap-6 sm:grid-cols-4">
             {[
-              ["Proven", "Local roof & damp expertise"],
+              ["Proven", "Nationwide roof & damp expertise"],
               ["100%", "Permanent damp removal"],
               ["10-Year", "Written guarantees"],
               ["Full", "Property restoration scope"],
@@ -161,10 +166,10 @@ function Index() {
       <section className="border-t border-border bg-card py-10">
         <div className="mx-auto max-w-6xl px-5 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-primary">Johannesburg Moisture Notice</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-primary">Moisture & Damp Notice</span>
             <h3 className="text-xl font-bold uppercase mt-1">Is damp destroying your walls or bubbling your paint?</h3>
             <p className="text-sm text-muted-foreground mt-1 max-w-2xl">
-              Gauteng's heavy rain cycles cause severe rising damp and lateral moisture penetration in ground-floor walls. Painting over it won't work — we neutralize the salt and install permanent moisture barriers.
+              Heavy coastal and inland weather cycles cause severe rising damp and lateral moisture penetration in ground-floor walls. Painting over it won't work — we neutralize the salt and install permanent moisture barriers.
             </p>
           </div>
           <Link to="/contact" className="btn-primary shrink-0">
@@ -265,19 +270,19 @@ function Index() {
         </ol>
       </section>
 
-      {/* Areas */}
+      {/* Service Coverage */}
       <section className="border-t border-border bg-deep">
         <div className="mx-auto max-w-6xl px-5 py-16">
-          <p className="eyebrow">Service areas</p>
-          <h2 className="mt-3 text-2xl uppercase sm:text-3xl font-black">Across greater Johannesburg</h2>
+          <p className="eyebrow">Service Coverage</p>
+          <h2 className="mt-3 text-2xl uppercase sm:text-3xl font-black">Operating Nationwide Across South Africa</h2>
           <ul className="mt-8 flex flex-wrap gap-2">
-            {areas.map((a) => (
+            {regions.map((r) => (
               <li
-                key={a}
+                key={r}
                 className="flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm text-muted-foreground"
               >
                 <CheckCircle2 className="size-4 text-primary" aria-hidden="true" />
-                {a}
+                {r}
               </li>
             ))}
           </ul>
@@ -294,14 +299,20 @@ function Index() {
             Banish Leaks &amp; Damp From Your Property
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-primary-foreground/90 leading-relaxed">
-            Book an on-site moisture and roof assessment now. Eliminate damp, peeling paint, and water leaks permanently.
+            Book an on-site moisture and roof assessment now. Eliminate damp, peeling paint, and water leaks permanently anywhere in South Africa.
           </p>
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
             <a
               href="tel:0792859461"
               className="inline-flex items-center justify-center rounded-sm bg-deep px-6 py-3 font-semibold text-deep-foreground transition-transform hover:-translate-y-0.5"
             >
-              Call 079 285 9461
+              Call Ralf (079 285 9461)
+            </a>
+            <a
+              href="tel:0797973960"
+              className="inline-flex items-center justify-center rounded-sm bg-deep px-6 py-3 font-semibold text-deep-foreground transition-transform hover:-translate-y-0.5"
+            >
+              Call Earl (079 797 3960)
             </a>
             <Link
               to="/contact"

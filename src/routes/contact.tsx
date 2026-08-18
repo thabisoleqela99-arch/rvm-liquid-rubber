@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Phone, Mail, MapPin, Send, MessageCircle, Clock, CheckCircle2 } from "lucide-react";
+import { Phone, Mail, MapPin, Send, MessageCircle, Clock, CheckCircle2, User } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -9,13 +9,13 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Your local liquid rubber genie at your service. Get in touch with RVM for 10-year guaranteed roof waterproofing, permanent damp removal, rising damp treatments, painting, remodeling, and repairs in Johannesburg.",
+          "Your local liquid rubber genie at your service. Contact Ralf Naidoo (079 285 9461) or Earl Takka (079 797 3960) for 10-year guaranteed roof waterproofing, damp removal, painting, and remodeling across South Africa.",
       },
       { property: "og:title", content: "Contact RVM Liquid Rubber — Waterproofing & Damp Removal" },
       {
         property: "og:description",
         content:
-          "Chat directly on WhatsApp or submit a formal quote request for liquid rubber waterproofing, damp proofing, leak detection, and property refurbishments across Gauteng.",
+          "Chat directly on WhatsApp or submit a formal quote request for liquid rubber waterproofing, damp proofing, leak detection, and property refurbishments across South Africa.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/contact" },
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/contact")({
 export function ContactPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  // RVM WhatsApp Business number: 079 285 9461 -> International format: 27792859461
+  // Default WhatsApp link pointing to Ralf Naidoo
   const whatsappNumber = "27792859461";
   const defaultMessage = encodeURIComponent(
     "Hi RVM, I would like to request an on-site assessment and quote for my property."
@@ -37,7 +37,6 @@ export function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Integrated backend form logic goes here
     setFormSubmitted(true);
   };
 
@@ -53,7 +52,7 @@ export function ContactPage() {
           </div>
           <h1 className="mt-2 text-4xl font-black uppercase sm:text-5xl">Contact RVM</h1>
           <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Request an itemized quotation online or message us directly on WhatsApp for immediate assistance with roof waterproofing, damp removal, or property refurbishments.
+            Request an itemized quotation online or message us directly for immediate assistance with roof waterproofing, damp removal, or property refurbishments nationwide.
           </p>
         </div>
       </section>
@@ -92,18 +91,30 @@ export function ContactPage() {
               </a>
             </div>
 
-            {/* Standard Contact Info Cards */}
+            {/* Direct Contacts Info Cards */}
             <div className="rounded-xl border border-border bg-card p-6 space-y-6">
-              <h2 className="text-lg font-bold uppercase border-b border-border pb-3">Contact Details</h2>
+              <h2 className="text-lg font-bold uppercase border-b border-border pb-3">Direct Contacts</h2>
 
               <div className="flex items-start gap-4">
                 <div className="p-2.5 rounded-lg bg-primary/10 text-primary shrink-0">
-                  <Phone className="size-5" />
+                  <User className="size-5" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground uppercase font-semibold">Phone Callouts</p>
+                  <p className="text-xs text-muted-foreground uppercase font-semibold">Ralf Naidoo</p>
                   <a href="tel:0792859461" className="text-base font-bold hover:text-primary transition-colors">
                     079 285 9461
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="p-2.5 rounded-lg bg-primary/10 text-primary shrink-0">
+                  <User className="size-5" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase font-semibold">Earl Takka</p>
+                  <a href="tel:0797973960" className="text-base font-bold hover:text-primary transition-colors">
+                    079 797 3960
                   </a>
                 </div>
               </div>
@@ -126,7 +137,7 @@ export function ContactPage() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground uppercase font-semibold">Service Coverage</p>
-                  <p className="text-sm font-medium">Greater Johannesburg &amp; Gauteng Area</p>
+                  <p className="text-sm font-medium">Nationwide Across South Africa</p>
                 </div>
               </div>
 
@@ -160,7 +171,7 @@ export function ContactPage() {
                   <CheckCircle2 className="size-12 text-primary mx-auto" />
                   <h3 className="text-xl font-bold uppercase">Quote Request Received!</h3>
                   <p className="text-sm text-muted-foreground">
-                    Thank you. One of our waterproofing and damp removal specialists will reach out to you within 24 hours.
+                    Thank you. One of our specialists will reach out to you within 24 hours.
                   </p>
                 </div>
               ) : (
@@ -197,11 +208,11 @@ export function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold uppercase mb-1.5">Suburb / Location</label>
+                      <label className="block text-xs font-semibold uppercase mb-1.5">City / Province</label>
                       <input
                         type="text"
                         required
-                        placeholder="e.g. Sandton, Roodepoort"
+                        placeholder="e.g. Johannesburg, Cape Town, Durban"
                         className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none"
                       />
                     </div>

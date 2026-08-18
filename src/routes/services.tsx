@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Building2, Droplets, Home, Layers, ShieldCheck, Wrench, Bath, Hammer, HardHat, Paintbrush, ShieldAlert } from "lucide-react";
+import { Building2, Droplets, Home, Layers, ShieldCheck, Wrench, Bath, Hammer, HardHat, Paintbrush, ShieldAlert, Phone } from "lucide-react";
 
 import serviceCommercial from "@/assets/service-commercial.jpg";
 import serviceResidential from "@/assets/service-residential.jpg";
@@ -18,13 +18,13 @@ export const Route = createFileRoute("/services")({
       {
         name: "description",
         content:
-          "Your local liquid rubber genie at your service. SABS-tested liquid rubber waterproofing (10-year guarantee), specialized damp removal, rising damp treatment, exterior painting, and structural refurbishments across Johannesburg.",
+          "Your local liquid rubber genie at your service. SABS-tested liquid rubber waterproofing (10-year guarantee), specialized damp removal, rising damp treatment, exterior painting, and structural refurbishments across South Africa.",
       },
       { property: "og:title", content: "Waterproofing & Advanced Damp Removal Services — RVM Liquid Rubber" },
       {
         property: "og:description",
         content:
-          "Official 10-year liquid rubber guarantee, permanent damp removal, rising damp chemical barriers, interior remodeling, plumbing, and structural property refurbishments.",
+          "Official 10-year liquid rubber guarantee, permanent damp removal, rising damp chemical barriers, interior remodeling, plumbing, and structural property refurbishments nationwide.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/services" },
@@ -53,7 +53,7 @@ const coreServices = [
   {
     icon: Paintbrush,
     title: "Exterior & Interior Wall Painting",
-    copy: "Complete surface preparation, crack sealing, damp-resistant primers, and high-durability weather-resistant painting. Designed to protect exterior masonry from harsh Gauteng weather while delivering flawless interior color applications.",
+    copy: "Complete surface preparation, crack sealing, damp-resistant primers, and high-durability weather-resistant painting. Designed to protect exterior masonry from harsh climate conditions while delivering flawless interior color applications.",
   },
   {
     icon: Hammer,
@@ -121,7 +121,7 @@ function ServicesPage() {
             Waterproofing, Damp Removal &amp; Remodeling
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            Delivering 10-year guaranteed liquid rubber waterproofing, permanent damp removal, roof leak isolation, ceiling board repairs, and full property refurbishments across Gauteng.
+            Delivering 10-year guaranteed liquid rubber waterproofing, permanent damp removal, roof leak isolation, ceiling board repairs, and full property refurbishments across South Africa.
           </p>
         </div>
       </section>
@@ -161,7 +161,7 @@ function ServicesPage() {
             <p className="eyebrow text-primary font-bold mb-2">Proven Results</p>
             <h2 className="text-3xl uppercase font-black">Recent Before &amp; After Transformations</h2>
             <p className="mt-2 text-muted-foreground">
-              Real transformations across our roof waterproofing, damp removal, painting, and structural restoration jobs in Greater Johannesburg.
+              Real transformations across our roof waterproofing, damp removal, painting, and structural restoration jobs nationwide.
             </p>
           </div>
           <div className="mt-10 grid gap-8 grid-cols-1 lg:grid-cols-3">
@@ -210,7 +210,12 @@ function ServicesPage() {
         </p>
         <div className="mt-8 flex justify-center gap-4 flex-wrap">
           <a href="tel:0792859461" className="btn-primary">
-            Call 079 285 9461
+            <Phone className="size-4" aria-hidden="true" />
+            Ralf: 079 285 9461
+          </a>
+          <a href="tel:0797973960" className="btn-primary">
+            <Phone className="size-4" aria-hidden="true" />
+            Earl: 079 797 3960
           </a>
           <Link to="/contact" className="btn-outline">
             Request a Quote

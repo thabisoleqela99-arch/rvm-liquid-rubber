@@ -11,13 +11,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Your local liquid rubber genie at your service. Learn about RVM Trading and Consulting t/a RVM Liquid Rubber. Dedicated to safety, SABS-tested liquid rubber waterproofing, permanent damp removal, site prayer, and community outreach in Gauteng.",
+          "Your local liquid rubber genie at your service. Learn about RVM Trading and Consulting t/a RVM Liquid Rubber. Dedicated to safety, SABS-tested liquid rubber waterproofing, permanent damp removal, site prayer, and community outreach nationwide.",
       },
       { property: "og:title", content: "About RVM Liquid Rubber — Waterproofing & Damp Removal Specialists" },
       {
         property: "og:description",
         content:
-          "Your local liquid rubber genie at your service. High safety standards, 10-year guarantees, rising damp elimination, structural integrity, and community initiatives across Johannesburg.",
+          "Your local liquid rubber genie at your service. High safety standards, 10-year guarantees, rising damp elimination, structural integrity, and community initiatives across South Africa.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/about" },
@@ -41,7 +41,7 @@ const values = [
   {
     icon: ShieldAlert,
     title: "Permanent Damp & Moisture Removal",
-    copy: "Specialized chemical damp proofing, plaster stripping, salt efflorescence treatment, and anti-fungal barrier sealers for Johannesburg properties.",
+    copy: "Specialized chemical damp proofing, plaster stripping, salt efflorescence treatment, and anti-fungal barrier sealers for properties across South Africa.",
   },
   {
     icon: Sparkles,
@@ -72,7 +72,7 @@ function AboutPage() {
             Craftsmanship, Safety &amp; Purpose
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            RVM Trading and Consulting (trading as <strong>RVM Liquid Rubber</strong>) delivers premium 10-year guaranteed waterproofing, specialized damp removal, plumbing, tiling, and interior refurbishments across greater Johannesburg.
+            RVM Trading and Consulting (trading as <strong>RVM Liquid Rubber</strong>) delivers premium 10-year guaranteed waterproofing, specialized damp removal, plumbing, tiling, and interior refurbishments across South Africa.
           </p>
         </div>
       </section>
@@ -85,7 +85,7 @@ function AboutPage() {
           <div className="w-full flex justify-center items-center">
             <img 
               src={ownerPic} 
-              alt="RVM Owner / Management" 
+              alt="RVM Management Team" 
               className="w-full h-auto rounded-xl object-contain border border-border shadow-card max-h-[600px]"
             />
           </div>
@@ -96,7 +96,7 @@ function AboutPage() {
             <h2 className="mt-3 text-3xl uppercase font-black">Hand-Applied Quality &amp; Total Damp Protection</h2>
             
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              <strong>RVM Trading and Consulting</strong> (trading as <strong>RVM Liquid Rubber</strong>) is your local liquid rubber genie at your service — delivering premium waterproofing, rising damp elimination, plumbing, tiling, and interior refurbishments for residential and commercial properties across greater Johannesburg.
+              <strong>RVM Trading and Consulting</strong> (trading as <strong>RVM Liquid Rubber</strong>) is your local liquid rubber genie at your service — delivering premium waterproofing, rising damp elimination, plumbing, tiling, and interior refurbishments for residential and commercial properties nationwide.
             </p>
 
             <div className="mt-6 space-y-4 text-sm text-muted-foreground leading-relaxed">
@@ -124,7 +124,7 @@ function AboutPage() {
             <p className="eyebrow text-primary font-bold">Operational Standards</p>
             <h2 className="mt-3 text-3xl uppercase font-black">Honest Pricing &amp; Certified Scope</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              We focus on interior remodeling, permanent rising damp removal, bathroom updates, tiling, plumbing, and structural roof waterproofing for residential and commercial spaces rather than building ground-up houses from scratch.
+              We focus on interior remodeling, permanent rising damp removal, bathroom updates, tiling, plumbing, and structural roof waterproofing for residential and commercial spaces nationwide rather than building ground-up houses from scratch.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               To ensure complete pricing accuracy and eliminate surprise costs, we prioritize thorough <strong>on-site assessments</strong> prior to issuing final itemized quotes. If an interior modification involves weight-bearing pillars or structural walls, we bring in certified structural consultants to verify safety before execution.
@@ -220,12 +220,16 @@ function AboutPage() {
           </p>
           <h2 className="text-3xl uppercase font-black">Need a Professional Damp or Roof Assessment?</h2>
           <p className="mt-3 text-muted-foreground">
-            Call <strong>079 285 9461</strong> or email <strong>info@rvmconsulting.co.za</strong> to schedule an on-site visit.
+            Contact <strong>Ralf Naidoo (079 285 9461)</strong> or <strong>Earl Takka (079 797 3960)</strong>, or email <strong>info@rvmconsulting.co.za</strong> to schedule an on-site visit.
           </p>
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
             <a href="tel:0792859461" className="btn-primary">
               <Phone className="size-4" aria-hidden="true" />
-              Call 079 285 9461
+              Call Ralf
+            </a>
+            <a href="tel:0797973960" className="btn-primary">
+              <Phone className="size-4" aria-hidden="true" />
+              Call Earl
             </a>
             <Link to="/contact" className="btn-outline">
               Request a quote

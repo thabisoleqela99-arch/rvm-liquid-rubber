@@ -143,7 +143,7 @@ function Index() {
           </div>
           <dl className="mt-14 grid max-w-2xl grid-cols-2 gap-6 sm:grid-cols-4">
             {[
-              ["15+", "Years on Jo'burg properties"],
+              ["Proven", "Local roof & damp expertise"],
               ["100%", "Permanent damp removal"],
               ["10-Year", "Written guarantees"],
               ["Full", "Property restoration scope"],

@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ShieldCheck, HeartHandshake, HardHat, Phone, Users, Sparkles, Building2, ShieldAlert, Droplet } from "lucide-react";
+import { ShieldCheck, HeartHandshake, HardHat, Phone, Users, Sparkles, Building2, ShieldAlert, Droplets } from "lucide-react";
 
 // Asset Import
 import ownerPic from "../assets/Owner-Picture.png";
@@ -101,7 +101,7 @@ function AboutPage() {
 
             <div className="mt-6 space-y-4 text-sm text-muted-foreground leading-relaxed">
               <p>
-                <strong className="text-foreground">Waterproofing &amp; Damp Expertise:</strong> We specialize in high-durability liquid rubber waterproofing painted directly by hand for maximum coverage, backed by a 10-year written guarantee. We also eradicate persistent rising damp, peeling paint, and wall moisture using SABS / BAA tested sealers and chemical barriers.
+                <strong className="text-foreground">Waterproofing &amp; Damp Expertise:</strong> We specialize in high-durability liquid rubber waterproofing painted directly by hand for maximum coverage, backed by a 10-year written guarantee. Driven by proven industry expertise, we eradicate persistent rising damp, peeling paint, and wall moisture using SABS / BAA tested sealers and chemical barriers.
               </p>
               
               <p>

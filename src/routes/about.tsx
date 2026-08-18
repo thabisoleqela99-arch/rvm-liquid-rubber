@@ -11,13 +11,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Your local liquid rubber genie at your service. Learn about RVM Trading and Consulting t/a RVM Liquid Rubber. Dedicated to safety, SABS-tested liquid rubber waterproofing, permanent damp removal, site prayer, and community outreach nationwide.",
+          "Your local liquid rubber genie at your service. Learn about RVM Trading and Consulting t/a RVM Liquid Rubber. Driven owner-managed business with a hands-on approach, dedicated to safety, SABS-tested liquid rubber waterproofing, permanent damp removal, site prayer, and community outreach nationwide.",
       },
       { property: "og:title", content: "About RVM Liquid Rubber — Waterproofing & Damp Removal Specialists" },
       {
         property: "og:description",
         content:
-          "Your local liquid rubber genie at your service. High safety standards, 10-year guarantees, rising damp elimination, structural integrity, and community initiatives across South Africa.",
+          "Your local liquid rubber genie at your service. Driven owner-managed business with a hands-on approach. High safety standards, 10-year guarantees, rising damp elimination, structural integrity, and community initiatives across South Africa.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/about" },
@@ -54,7 +54,6 @@ const communityProjects = [
   "Doorway to Dignity community support & outreach initiatives",
   "Local feeding schemes and emergency food distribution support",
   "Church venue refurbishments, structural waterproofing, and damp repair",
-  "Local youth development and skills upliftment programs",
 ];
 
 function AboutPage() {
@@ -72,7 +71,7 @@ function AboutPage() {
             Craftsmanship, Safety &amp; Purpose
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            RVM Trading and Consulting (trading as <strong>RVM Liquid Rubber</strong>) delivers premium 10-year guaranteed waterproofing, specialized damp removal, plumbing, tiling, and interior refurbishments across South Africa.
+            RVM Trading and Consulting (trading as <strong>RVM Liquid Rubber</strong>) is a driven owner-managed business with a hands-on approach, delivering premium 10-year guaranteed waterproofing, specialized damp removal, plumbing, tiling, and interior refurbishments across South Africa.
           </p>
         </div>
       </section>
@@ -96,7 +95,7 @@ function AboutPage() {
             <h2 className="mt-3 text-3xl uppercase font-black">Hand-Applied Quality &amp; Total Damp Protection</h2>
             
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              <strong>RVM Trading and Consulting</strong> (trading as <strong>RVM Liquid Rubber</strong>) is your local liquid rubber genie at your service — delivering premium waterproofing, rising damp elimination, plumbing, tiling, and interior refurbishments for residential and commercial properties nationwide.
+              <strong>RVM Trading and Consulting</strong> (trading as <strong>RVM Liquid Rubber</strong>) is your local liquid rubber genie at your service — a driven owner-managed business with a hands-on approach delivering premium waterproofing, rising damp elimination, plumbing, tiling, and interior refurbishments for residential and commercial properties nationwide.
             </p>
 
             <div className="mt-6 space-y-4 text-sm text-muted-foreground leading-relaxed">
@@ -109,7 +108,7 @@ function AboutPage() {
               </p>
 
               <p>
-                <strong className="text-foreground">Driven by Integrity:</strong> Every project starts with dedication and care—our experienced, trusted teams go above and beyond to protect your home, ensure quality craftsmanship, and make a positive community impact.
+                <strong className="text-foreground">Driven by Integrity:</strong> Every project starts with dedication and care—our experienced, trusted teams go above and beyond to protect your home, ensure quality craftsmanship, and make a positive community impact. The business is driven on the principles of kingdom business beliefs.
               </p>
             </div>
           </div>
@@ -127,7 +126,7 @@ function AboutPage() {
               We focus on interior remodeling, permanent rising damp removal, bathroom updates, tiling, plumbing, and structural roof waterproofing for residential and commercial spaces nationwide rather than building ground-up houses from scratch.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              To ensure complete pricing accuracy and eliminate surprise costs, we prioritize thorough <strong>on-site assessments</strong> prior to issuing final itemized quotes. If an interior modification involves weight-bearing pillars or structural walls, we bring in certified structural consultants to verify safety before execution.
+              To ensure complete pricing accuracy and eliminate surprise costs, we prioritize thorough <strong>on-site assessments</strong> prior to issuing final itemized quotes. As a driven owner-managed business with a hands-on approach, our leadership is actively involved on site. If an interior modification involves weight-bearing pillars or structural walls, we bring in certified structural consultants to verify safety before execution.
             </p>
           </div>
 

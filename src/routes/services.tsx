@@ -14,17 +14,17 @@ import job3After from "@/assets/Job3-After.jpg";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Waterproofing, Painting, Roofing & Refurbishments | RVM Trading and Consulting" },
+      { title: "Services — Your Local Liquid Rubber Genie at Your Service | RVM Liquid Rubber" },
       {
         name: "description",
         content:
-          "SABS-tested liquid rubber waterproofing with 10-year guarantees, interior remodeling, ceiling repairs, exterior painting, and structural refurbishments across Johannesburg.",
+          "Your local liquid rubber genie at your service. SABS-tested liquid rubber waterproofing with 10-year guarantees, interior remodeling, ceiling repairs, exterior painting, and structural refurbishments across Johannesburg.",
       },
-      { property: "og:title", content: "Waterproofing & Renovation Services — RVM Trading and Consulting" },
+      { property: "og:title", content: "Waterproofing & Renovation Services — RVM Liquid Rubber" },
       {
         property: "og:description",
         content:
-          "Official 10-year liquid rubber guarantee, interior remodeling, plumbing, tiling, ceiling installation, and structural property refurbishments.",
+          "Official 10-year liquid rubber guarantee, interior remodeling, plumbing, tiling, ceiling installation, and structural property refurbishments. Your local liquid rubber genie at your service.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/services" },
@@ -107,11 +107,15 @@ function ServicesPage() {
       {/* Header */}
       <section className="border-b border-border bg-gradient-deep">
         <div className="mx-auto max-w-6xl px-5 py-20">
-          <p className="eyebrow">RVM Trading and Consulting t/a RVM Liquid Rubber</p>
-          <h1 className="mt-4 max-w-3xl text-4xl uppercase sm:text-5xl font-black">
+          <div className="inline-block rounded-full bg-primary/10 border border-primary/30 px-4 py-1.5 mb-4">
+            <p className="eyebrow text-primary text-xs sm:text-sm font-bold tracking-widest uppercase">
+              ✨ Your local liquid rubber genie at your service
+            </p>
+          </div>
+          <h1 className="mt-2 max-w-3xl text-4xl uppercase sm:text-5xl font-black">
             Waterproofing &amp; Comprehensive Remodeling Services
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
+          <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
             Delivering 10-year guaranteed liquid rubber waterproofing, roof leak isolation, interior remodeling, ceiling board repairs, and full property refurbishments across Gauteng.
           </p>
         </div>
@@ -119,12 +123,14 @@ function ServicesPage() {
 
       {/* Service Cards Grid */}
       <section className="mx-auto max-w-6xl px-5 py-20">
+        <p className="eyebrow text-primary font-bold mb-2">Our Capabilities</p>
+        <h2 className="text-3xl uppercase font-black mb-10">Expert Property Solutions</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {coreServices.map((s) => (
             <div key={s.title} className="rounded-lg border border-border bg-card p-6 shadow-card flex flex-col justify-between">
               <div>
                 <s.icon className="size-7 text-primary" aria-hidden="true" />
-                <h2 className="mt-4 text-lg uppercase font-bold tracking-tight">{s.title}</h2>
+                <h3 className="mt-4 text-lg uppercase font-bold tracking-tight">{s.title}</h3>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.copy}</p>
               </div>
             </div>
@@ -147,7 +153,8 @@ function ServicesPage() {
       <section className="border-b border-border py-16">
         <div className="mx-auto max-w-6xl px-5">
           <div className="text-center">
-            <h2 className="text-3xl uppercase font-black">Recent Before &amp; After Results</h2>
+            <p className="eyebrow text-primary font-bold mb-2">Proven Results</p>
+            <h2 className="text-3xl uppercase font-black">Recent Before &amp; After Transformations</h2>
             <p className="mt-2 text-muted-foreground">
               Real transformations across our roof waterproofing, painting, and structural restoration jobs in Greater Johannesburg.
             </p>
@@ -189,6 +196,9 @@ function ServicesPage() {
 
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-5 py-20 text-center">
+        <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">
+          Your local liquid rubber genie at your service
+        </p>
         <h2 className="text-3xl uppercase font-black">Ready for an On-Site Assessment?</h2>
         <p className="mt-4 max-w-xl mx-auto text-muted-foreground">
           Contact our team today to schedule an inspection for waterproofing, roof sealing, ceiling restoration, painting, or interior remodeling.

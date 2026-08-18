@@ -11,17 +11,17 @@ import serviceCommercial from "@/assets/service-commercial.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "RVM Liquid Rubber — Waterproofing & Home Improvement Specialists" },
+      { title: "RVM Liquid Rubber — Your Local Liquid Rubber Genie at Your Service" },
       {
         name: "description",
         content:
-          "RVM Liquid Rubber offers roof waterproofing, home improvement, and structural repair services across Johannesburg. Liquid rubber coatings, damp proofing, and property maintenance.",
+          "Your local liquid rubber genie at your service. RVM offers 10-year guaranteed roof waterproofing, home improvement, and structural repairs across Johannesburg.",
       },
-      { property: "og:title", content: "RVM Liquid Rubber — Johannesburg Waterproofing & Home Improvement" },
+      { property: "og:title", content: "RVM Liquid Rubber — Your Local Liquid Rubber Genie at Your Service" },
       {
         property: "og:description",
         content:
-          "Liquid rubber roof waterproofing, home improvement, leak detection, and maintenance for residential and commercial properties in Johannesburg.",
+          "Liquid rubber roof waterproofing, home improvement, leak detection, and maintenance across Johannesburg. Your local liquid rubber genie at your service.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -35,6 +35,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "HomeAndConstructionBusiness",
           name: "RVM Liquid Rubber",
+          slogan: "Your local liquid rubber genie at your service",
           email: "info@rvmconsulting.co.za",
           telephone: "079 285 9461",
           description:
@@ -57,7 +58,7 @@ const services = [
   {
     icon: Droplets,
     title: "Liquid Rubber Membrane",
-    copy: "Seamless, elastic liquid rubber application ideal for flat roofs, parapets, and box gutters.",
+    copy: "Seamless, elastic liquid rubber application ideal for flat roofs, parapets, and box gutters. Backed by a 10-year written guarantee.",
     image: serviceTorchOn,
   },
   {
@@ -115,12 +116,18 @@ function Index() {
         />
         <div className="absolute inset-0 bg-gradient-deep opacity-80" />
         <div className="relative mx-auto max-w-6xl px-5 py-24 md:py-32">
-          <p className="eyebrow">Johannesburg · Gauteng</p>
-          <h1 className="mt-4 max-w-3xl text-4xl uppercase sm:text-5xl md:text-6xl">
+          {/* Slogan Banner */}
+          <div className="inline-block rounded-full bg-primary/10 border border-primary/30 px-4 py-1.5 mb-6">
+            <p className="eyebrow text-primary text-xs sm:text-sm font-bold tracking-widest uppercase">
+              ✨ Your local liquid rubber genie at your service
+            </p>
+          </div>
+
+          <h1 className="mt-2 max-w-3xl text-4xl uppercase sm:text-5xl md:text-6xl font-black">
             Waterproofing &amp; Home Improvement
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-            RVM Liquid Rubber seals, restores, and improves roofs and properties across Johannesburg — delivered with expert craftsmanship and written guarantees.
+          <p className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed">
+            RVM Liquid Rubber seals, restores, and improves roofs and properties across Johannesburg — delivered with expert craftsmanship and written 10-year guarantees.
           </p>
           <div className="mt-9 flex flex-wrap gap-4 items-center">
             <a href="tel:0792859461" className="btn-primary">
@@ -142,7 +149,7 @@ function Index() {
               ["Full", "Home improvement scope"],
             ].map(([stat, label]) => (
               <div key={label}>
-                <dt className="font-display text-2xl text-primary">{stat}</dt>
+                <dt className="font-display text-2xl text-primary font-bold">{stat}</dt>
                 <dd className="mt-1 text-sm text-muted-foreground">{label}</dd>
               </div>
             ))}
@@ -154,10 +161,10 @@ function Index() {
       <section className="border-t border-border bg-deep py-16">
         <div className="mx-auto max-w-6xl px-5">
           <div className="text-center">
-            <p className="eyebrow">On the job</p>
-            <h2 className="mt-3 text-3xl uppercase sm:text-4xl">See Our Work in Action</h2>
+            <p className="eyebrow">Your local liquid rubber genie at your service</p>
+            <h2 className="mt-3 text-3xl uppercase sm:text-4xl font-black">See Our Work in Action</h2>
             <p className="mt-2 text-muted-foreground">
-              Watch our team complete high-quality liquid rubber waterproofing and structural repairs.
+              Watch our team complete high-quality liquid rubber waterproofing, leak sealing, and structural repairs.
             </p>
           </div>
           <div className="mt-8 flex justify-center">
@@ -174,7 +181,7 @@ function Index() {
       {/* Service Card Grid (What We Do) */}
       <section className="mx-auto max-w-6xl px-5 py-20">
         <p className="eyebrow">What we do</p>
-        <h2 className="mt-3 text-3xl uppercase sm:text-4xl">Waterproofing &amp; Home Improvement</h2>
+        <h2 className="mt-3 text-3xl uppercase sm:text-4xl font-black">Waterproofing &amp; Home Improvement</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {services.map((s) => (
             <article
@@ -191,8 +198,8 @@ function Index() {
               />
               <div className="p-6">
                 <s.icon className="size-6 text-primary" aria-hidden="true" />
-                <h3 className="mt-4 text-lg uppercase">{s.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{s.copy}</p>
+                <h3 className="mt-4 text-lg uppercase font-bold">{s.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.copy}</p>
               </div>
             </article>
           ))}
@@ -214,7 +221,7 @@ function Index() {
             <div key={e.title} className="flex gap-4">
               <e.icon className="mt-1 size-5 shrink-0 text-primary" aria-hidden="true" />
               <div>
-                <h3 className="text-base uppercase">{e.title}</h3>
+                <h3 className="text-base uppercase font-bold">{e.title}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{e.copy}</p>
               </div>
             </div>
@@ -225,7 +232,7 @@ function Index() {
       {/* Process */}
       <section className="mx-auto max-w-6xl px-5 py-20">
         <p className="eyebrow">How it works</p>
-        <h2 className="mt-3 text-3xl uppercase sm:text-4xl">Four steps, no guesswork</h2>
+        <h2 className="mt-3 text-3xl uppercase sm:text-4xl font-black">Four steps, no guesswork</h2>
         <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
             ["01", "Site inspection", "We assess the property, photograph problem areas, and test for damp."],
@@ -234,9 +241,9 @@ function Index() {
             ["04", "Sign-off", "Quality testing, handover pack, and guarantee certificate."],
           ].map(([num, title, copy]) => (
             <li key={num} className="rounded-lg border border-border bg-card p-6 shadow-card">
-              <span className="font-display text-sm text-primary">{num}</span>
-              <h3 className="mt-3 text-base uppercase">{title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{copy}</p>
+              <span className="font-display text-sm text-primary font-bold">{num}</span>
+              <h3 className="mt-3 text-base uppercase font-bold">{title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{copy}</p>
             </li>
           ))}
         </ol>
@@ -246,7 +253,7 @@ function Index() {
       <section className="border-t border-border bg-deep">
         <div className="mx-auto max-w-6xl px-5 py-16">
           <p className="eyebrow">Service areas</p>
-          <h2 className="mt-3 text-2xl uppercase sm:text-3xl">Across greater Johannesburg</h2>
+          <h2 className="mt-3 text-2xl uppercase sm:text-3xl font-black">Across greater Johannesburg</h2>
           <ul className="mt-8 flex flex-wrap gap-2">
             {areas.map((a) => (
               <li
@@ -264,11 +271,14 @@ function Index() {
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-5 py-20">
         <div className="rounded-lg border border-border bg-gradient-accent p-10 text-center shadow-lift">
-          <h2 className="text-3xl uppercase text-primary-foreground sm:text-4xl">
+          <p className="text-xs font-bold uppercase tracking-widest text-primary-foreground/90 mb-2">
+            Your local liquid rubber genie at your service
+          </p>
+          <h2 className="text-3xl uppercase text-primary-foreground sm:text-4xl font-black">
             Upgrade &amp; Protect Your Property
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-primary-foreground/85">
-            Book a free property inspection now for waterproofing, repairs, and home improvements.
+          <p className="mx-auto mt-4 max-w-xl text-primary-foreground/90 leading-relaxed">
+            Book a free property inspection now for waterproofing, roof sealing, repairs, and home improvements.
           </p>
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
             <a

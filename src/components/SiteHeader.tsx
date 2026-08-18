@@ -26,8 +26,8 @@ export function SiteHeader() {
             <span className="font-display text-lg font-bold tracking-tight text-white">
               RVM Liquid Rubber
             </span>
-            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">
-              The Rubber Genie
+            <span className="text-[10px] font-semibold uppercase tracking-[0.1em] text-primary">
+              Your local liquid rubber genie at your service
             </span>
           </div>
         </Link>
@@ -53,7 +53,7 @@ export function SiteHeader() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden"
+          className="md:hidden text-foreground"
           aria-label={open ? "Close menu" : "Open menu"}
         >
           {open ? <X className="size-6" /> : <Menu className="size-6" />}

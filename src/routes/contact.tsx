@@ -33,7 +33,7 @@ export function ContactPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   // Dynamic asset fetching
-  const rylfPic = getAsset("Ralf.jpeg");
+  const rylfPic = getAsset("Ralf.png");
   const earlPic = getAsset("Earl.jpeg");
 
   // Direct WhatsApp link

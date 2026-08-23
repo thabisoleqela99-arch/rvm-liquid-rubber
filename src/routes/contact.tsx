@@ -1,6 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Phone, Mail, MapPin, Send, MessageCircle, Clock, CheckCircle2, User, Facebook } from "lucide-react";
+import { Mail, MapPin, Send, MessageCircle, Clock, CheckCircle2, Facebook } from "lucide-react";
+
+// Glob asset importer to safely load images regardless of casing or extension
+const assets = import.meta.glob("../assets/**/*.{jpg,jpeg,JPG,JPEG,png,PNG}", { eager: true, import: "default" }) as Record<string, string>;
+const getAsset = (filePath: string) => assets[`../assets/${filePath}`] || "";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -28,9 +32,12 @@ export const Route = createFileRoute("/contact")({
 export function ContactPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  // Direct WhatsApp links
+  // Dynamic asset fetching
+  const ralfPic = getAsset("Ralf.jpeg");
+  const earlPic = getAsset("Earl.jpeg");
+
+  // Direct WhatsApp link
   const ralfWhatsapp = "https://wa.me/27792859461?text=" + encodeURIComponent("Hi Ralf, I would like to request an on-site assessment and quote.");
-  const earlWhatsapp = "https://wa.me/27797973960?text=" + encodeURIComponent("Hi Earl, I would like to request an on-site assessment and quote.");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -64,10 +71,19 @@ export function ContactPage() {
             <div className="rounded-xl border border-border bg-card p-6 space-y-6 shadow-card">
               <h2 className="text-lg font-bold uppercase border-b border-border pb-3">Direct Contacts</h2>
 
-              <div className="flex items-start gap-4">
-                <div className="p-2.5 rounded-lg bg-primary/10 text-primary shrink-0">
-                  <User className="size-5" />
-                </div>
+              {/* Ralf Naidoo */}
+              <div className="flex items-center gap-4">
+                {ralfPic ? (
+                  <img
+                    src={ralfPic}
+                    alt="Ralf Naidoo"
+                    className="size-12 rounded-full object-cover border-2 border-primary/40 shrink-0"
+                  />
+                ) : (
+                  <div className="size-12 rounded-full bg-primary/10 text-primary border-2 border-primary/40 shrink-0 flex items-center justify-center text-xs font-bold">
+                    RN
+                  </div>
+                )}
                 <div>
                   <p className="text-xs text-muted-foreground uppercase font-semibold">Ralf Naidoo</p>
                   <a href="tel:0792859461" className="text-base font-bold hover:text-primary transition-colors">
@@ -76,10 +92,19 @@ export function ContactPage() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="p-2.5 rounded-lg bg-primary/10 text-primary shrink-0">
-                  <User className="size-5" />
-                </div>
+              {/* Earl Takka */}
+              <div className="flex items-center gap-4">
+                {earlPic ? (
+                  <img
+                    src={earlPic}
+                    alt="Earl Takka"
+                    className="size-12 rounded-full object-cover border-2 border-primary/40 shrink-0"
+                  />
+                ) : (
+                  <div className="size-12 rounded-full bg-primary/10 text-primary border-2 border-primary/40 shrink-0 flex items-center justify-center text-xs font-bold">
+                    ET
+                  </div>
+                )}
                 <div>
                   <p className="text-xs text-muted-foreground uppercase font-semibold">Earl Takka</p>
                   <a href="tel:0797973960" className="text-base font-bold hover:text-primary transition-colors">

@@ -131,7 +131,7 @@ function Index() {
             <div className="flex flex-wrap gap-3">
               <a href="tel:0792859461" className="btn-primary">
                 <Phone className="size-4" aria-hidden="true" />
-                Ralf: 079 285 9461
+                Rylf: 079 285 9461
               </a>
               <a href="tel:0797973960" className="btn-primary">
                 <Phone className="size-4" aria-hidden="true" />
@@ -306,7 +306,7 @@ function Index() {
               href="tel:0792859461"
               className="inline-flex items-center justify-center rounded-sm bg-deep px-6 py-3 font-semibold text-deep-foreground transition-transform hover:-translate-y-0.5"
             >
-              Call Ralf (079 285 9461)
+              Call Rylf (079 285 9461)
             </a>
             <a
               href="tel:0797973960"

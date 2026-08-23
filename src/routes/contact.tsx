@@ -13,7 +13,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Your local liquid rubber genie at your service. Contact Ralf Naidoo (079 285 9461) or Earl Takka (079 797 3960) for 10-year guaranteed roof waterproofing, damp removal, painting, and remodeling across South Africa.",
+          "Your local liquid rubber genie at your service. Contact Rylf Naidoo (079 285 9461) or Earl Takka (079 797 3960) for 10-year guaranteed roof waterproofing, damp removal, painting, and remodeling across South Africa.",
       },
       { property: "og:title", content: "Contact RVM Liquid Rubber — Waterproofing & Damp Removal" },
       {
@@ -33,11 +33,11 @@ export function ContactPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   // Dynamic asset fetching
-  const ralfPic = getAsset("Ralf.jpeg");
+  const rylfPic = getAsset("Ralf.jpeg");
   const earlPic = getAsset("Earl.jpeg");
 
   // Direct WhatsApp link
-  const ralfWhatsapp = "https://wa.me/27792859461?text=" + encodeURIComponent("Hi Ralf, I would like to request an on-site assessment and quote.");
+  const rylfWhatsapp = "https://wa.me/27792859461?text=" + encodeURIComponent("Hi Rylf, I would like to request an on-site assessment and quote.");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -71,12 +71,12 @@ export function ContactPage() {
             <div className="rounded-xl border border-border bg-card p-6 space-y-6 shadow-card">
               <h2 className="text-lg font-bold uppercase border-b border-border pb-3">Direct Contacts</h2>
 
-              {/* Ralf Naidoo */}
+              {/* Rylf Naidoo */}
               <div className="flex items-center gap-4">
-                {ralfPic ? (
+                {rylfPic ? (
                   <img
-                    src={ralfPic}
-                    alt="Ralf Naidoo"
+                    src={rylfPic}
+                    alt="Rylf Naidoo"
                     className="size-12 rounded-full object-cover border-2 border-primary/40 shrink-0"
                   />
                 ) : (
@@ -85,7 +85,7 @@ export function ContactPage() {
                   </div>
                 )}
                 <div>
-                  <p className="text-xs text-muted-foreground uppercase font-semibold">Ralf Naidoo</p>
+                  <p className="text-xs text-muted-foreground uppercase font-semibold">Rylf Naidoo</p>
                   <a href="tel:0792859461" className="text-base font-bold hover:text-primary transition-colors">
                     079 285 9461
                   </a>
@@ -157,7 +157,7 @@ export function ContactPage() {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
                 {/* WhatsApp Button */}
                 <a
-                  href={ralfWhatsapp}
+                  href={rylfWhatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col items-center justify-center p-3 rounded-lg border border-[#25D366]/40 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-black transition-all group"

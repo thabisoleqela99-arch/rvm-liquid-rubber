@@ -219,12 +219,12 @@ function AboutPage() {
           </p>
           <h2 className="text-3xl uppercase font-black">Need a Professional Damp or Roof Assessment?</h2>
           <p className="mt-3 text-muted-foreground">
-            Contact <strong>Ralf Naidoo (079 285 9461)</strong> or <strong>Earl Takka (079 797 3960)</strong>, or email <strong>info@rvmconsulting.co.za</strong> to schedule an on-site visit.
+            Contact <strong>Rylf Naidoo (079 285 9461)</strong> or <strong>Earl Takka (079 797 3960)</strong>, or email <strong>info@rvmconsulting.co.za</strong> to schedule an on-site visit.
           </p>
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
             <a href="tel:0792859461" className="btn-primary">
               <Phone className="size-4" aria-hidden="true" />
-              Call Ralf
+              Call Rylf
             </a>
             <a href="tel:0797973960" className="btn-primary">
               <Phone className="size-4" aria-hidden="true" />

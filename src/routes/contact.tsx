@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Phone, Mail, MapPin, Send, MessageCircle, Clock, CheckCircle2, User } from "lucide-react";
+import { Phone, Mail, MapPin, Send, MessageCircle, Clock, CheckCircle2, User, Facebook } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/contact")({
       {
         property: "og:description",
         content:
-          "Chat directly on WhatsApp or submit a formal quote request for liquid rubber waterproofing, damp proofing, leak detection, and property refurbishments across South Africa.",
+          "Connect on WhatsApp, Facebook, or TikTok, or submit a formal quote request for liquid rubber waterproofing, damp proofing, leak detection, and property refurbishments across South Africa.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/contact" },
@@ -28,12 +28,9 @@ export const Route = createFileRoute("/contact")({
 export function ContactPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  // Default WhatsApp link pointing to Ralf Naidoo
-  const whatsappNumber = "27792859461";
-  const defaultMessage = encodeURIComponent(
-    "Hi RVM, I would like to request an on-site assessment and quote for my property."
-  );
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${defaultMessage}`;
+  // Direct WhatsApp links
+  const ralfWhatsapp = "https://wa.me/27792859461?text=" + encodeURIComponent("Hi Ralf, I would like to request an on-site assessment and quote.");
+  const earlWhatsapp = "https://wa.me/27797973960?text=" + encodeURIComponent("Hi Earl, I would like to request an on-site assessment and quote.");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -52,7 +49,7 @@ export function ContactPage() {
           </div>
           <h1 className="mt-2 text-4xl font-black uppercase sm:text-5xl">Contact RVM</h1>
           <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Request an itemized quotation online or message us directly for immediate assistance with roof waterproofing, damp removal, or property refurbishments nationwide.
+            Request an itemized quotation online or connect with us directly via phone, WhatsApp, Facebook, or TikTok for assistance nationwide.
           </p>
         </div>
       </section>
@@ -60,39 +57,11 @@ export function ContactPage() {
       <section className="mx-auto max-w-6xl px-5 py-16">
         <div className="grid gap-12 lg:grid-cols-12">
           
-          {/* Left Column: Direct WhatsApp & Info Cards */}
+          {/* Left Column: Direct Contacts & Social Channels */}
           <div className="lg:col-span-5 space-y-6">
             
-            {/* WhatsApp Business Featured Card */}
-            <div className="rounded-xl border border-[#25D366]/40 bg-[#25D366]/10 p-6 shadow-card relative overflow-hidden">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-[#25D366] text-black shrink-0">
-                  <MessageCircle className="size-7 fill-current" />
-                </div>
-                <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-[#25D366]/20 text-[#25D366] border border-[#25D366]/30">
-                    Fastest Response
-                  </span>
-                  <h2 className="text-xl font-bold uppercase mt-1">Chat on WhatsApp</h2>
-                  <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
-                    Connect directly with our team to share photos of wall damp, roof leaks, or request quick callouts.
-                  </p>
-                </div>
-              </div>
-
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 flex items-center justify-center gap-2.5 w-full rounded-lg bg-[#25D366] px-5 py-3.5 text-sm font-bold text-black hover:bg-[#20bd5a] transition-all shadow-md hover:-translate-y-0.5"
-              >
-                <MessageCircle className="size-5 fill-current" />
-                Start WhatsApp Chat
-              </a>
-            </div>
-
-            {/* Direct Contacts Info Cards */}
-            <div className="rounded-xl border border-border bg-card p-6 space-y-6">
+            {/* Direct Contacts Info Card */}
+            <div className="rounded-xl border border-border bg-card p-6 space-y-6 shadow-card">
               <h2 className="text-lg font-bold uppercase border-b border-border pb-3">Direct Contacts</h2>
 
               <div className="flex items-start gap-4">
@@ -150,6 +119,54 @@ export function ContactPage() {
                   <p className="text-sm font-medium">Mon – Sat: 07:30 – 17:30</p>
                   <p className="text-xs text-primary font-semibold mt-0.5">24/7 Emergency Leak Response</p>
                 </div>
+              </div>
+            </div>
+
+            {/* Social & Messaging Channels Card */}
+            <div className="rounded-xl border border-border bg-card p-6 shadow-card space-y-4">
+              <h2 className="text-lg font-bold uppercase border-b border-border pb-3">Connect With Us</h2>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Follow our latest project transformations, video demonstrations, and chat directly with our team:
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                {/* WhatsApp Button */}
+                <a
+                  href={ralfWhatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-center p-3 rounded-lg border border-[#25D366]/40 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-black transition-all group"
+                  title="Chat on WhatsApp"
+                >
+                  <MessageCircle className="size-6 mb-1 fill-current" />
+                  <span className="text-xs font-bold uppercase tracking-wider">WhatsApp</span>
+                </a>
+
+                {/* Facebook Button */}
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-center p-3 rounded-lg border border-[#1877F2]/40 bg-[#1877F2]/10 text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition-all group"
+                  title="Visit Facebook Page"
+                >
+                  <Facebook className="size-6 mb-1 fill-current" />
+                  <span className="text-xs font-bold uppercase tracking-wider">Facebook</span>
+                </a>
+
+                {/* TikTok Button */}
+                <a
+                  href="https://tiktok.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-center p-3 rounded-lg border border-foreground/30 bg-foreground/5 text-foreground hover:bg-foreground hover:text-background transition-all group"
+                  title="Follow on TikTok"
+                >
+                  <svg className="size-6 mb-1 fill-current" viewBox="0 0 24 24">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.68 6.34 6.34 0 0 0 9.34 22a6.34 6.34 0 0 0 6.34-6.34V9.05a8.16 8.16 0 0 0 4.91 1.62v-3.98a4.85 4.85 0 0 1-1-.02z"/>
+                  </svg>
+                  <span className="text-xs font-bold uppercase tracking-wider">TikTok</span>
+                </a>
               </div>
             </div>
 

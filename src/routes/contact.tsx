@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Mail, MapPin, Send, MessageCircle, Clock, CheckCircle2, Facebook } from "lucide-react";
+import { Mail, MapPin, Send, MessageCircle, Clock, CheckCircle2, Facebook, Instagram } from "lucide-react";
 
 // Glob asset importer to safely load images regardless of casing or extension
 const assets = import.meta.glob("../assets/**/*.{jpg,jpeg,JPG,JPEG,png,PNG}", { eager: true, import: "default" }) as Record<string, string>;
@@ -19,7 +19,7 @@ export const Route = createFileRoute("/contact")({
       {
         property: "og:description",
         content:
-          "Connect on WhatsApp, Facebook, or TikTok, or submit a formal quote request for liquid rubber waterproofing, damp proofing, leak detection, and property refurbishments across South Africa.",
+          "Connect on WhatsApp, Facebook, Instagram, or TikTok, or submit a formal quote request for liquid rubber waterproofing, damp proofing, leak detection, and property refurbishments across South Africa.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/contact" },
@@ -56,7 +56,7 @@ export function ContactPage() {
           </div>
           <h1 className="mt-2 text-4xl font-black uppercase sm:text-5xl">Contact RVM</h1>
           <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Request an itemized quotation online or connect with us directly via phone, WhatsApp, Facebook, or TikTok for assistance nationwide.
+            Request an itemized quotation online or connect with us directly via phone, WhatsApp, Facebook, Instagram, or TikTok for assistance nationwide.
           </p>
         </div>
       </section>
@@ -154,7 +154,7 @@ export function ContactPage() {
                 Follow our latest project transformations, video demonstrations, and chat directly with our team:
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
                 {/* WhatsApp Button */}
                 <a
                   href={ralfWhatsapp}
@@ -164,19 +164,31 @@ export function ContactPage() {
                   title="Chat on WhatsApp"
                 >
                   <MessageCircle className="size-6 mb-1 fill-current" />
-                  <span className="text-xs font-bold uppercase tracking-wider">WhatsApp</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider">WhatsApp</span>
                 </a>
 
                 {/* Facebook Button */}
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/profile.php?id=61551126262606"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col items-center justify-center p-3 rounded-lg border border-[#1877F2]/40 bg-[#1877F2]/10 text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition-all group"
                   title="Visit Facebook Page"
                 >
                   <Facebook className="size-6 mb-1 fill-current" />
-                  <span className="text-xs font-bold uppercase tracking-wider">Facebook</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider">Facebook</span>
+                </a>
+
+                {/* Instagram Button */}
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-center p-3 rounded-lg border border-[#E4405F]/40 bg-[#E4405F]/10 text-[#E4405F] hover:bg-[#E4405F] hover:text-white transition-all group"
+                  title="Follow on Instagram"
+                >
+                  <Instagram className="size-6 mb-1" />
+                  <span className="text-[10px] font-bold uppercase tracking-wider">Instagram</span>
                 </a>
 
                 {/* TikTok Button */}
@@ -190,7 +202,7 @@ export function ContactPage() {
                   <svg className="size-6 mb-1 fill-current" viewBox="0 0 24 24">
                     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.68 6.34 6.34 0 0 0 9.34 22a6.34 6.34 0 0 0 6.34-6.34V9.05a8.16 8.16 0 0 0 4.91 1.62v-3.98a4.85 4.85 0 0 1-1-.02z"/>
                   </svg>
-                  <span className="text-xs font-bold uppercase tracking-wider">TikTok</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider">TikTok</span>
                 </a>
               </div>
             </div>

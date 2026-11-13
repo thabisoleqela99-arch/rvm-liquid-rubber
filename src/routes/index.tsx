@@ -27,7 +27,10 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      { rel: "canonical", href: "/" },
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+    ],
     scripts: [
       {
         type: "application/ld+json",
@@ -121,7 +124,7 @@ function Index() {
           </div>
 
           <h1 className="mt-2 max-w-3xl text-4xl uppercase sm:text-5xl md:text-6xl font-black">
-            Waterproofing, Damp Removal &amp; Home Improvement
+            Waterproofing, Damp Removal & Home Improvement
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed">
             Stop peeling paint, blistering plaster, and roof leaks for good. RVM Liquid Rubber banishes rising damp and protects properties nationwide with written 10-year guarantees.
@@ -202,7 +205,7 @@ function Index() {
       {/* Service Card Grid (What We Do) */}
       <section className="mx-auto max-w-6xl px-5 py-20">
         <p className="eyebrow">What we do</p>
-        <h2 className="mt-3 text-3xl uppercase sm:text-4xl font-black">Waterproofing, Damp Removal &amp; Remodeling</h2>
+        <h2 className="mt-3 text-3xl uppercase sm:text-4xl font-black">Waterproofing, Damp Removal & Remodeling</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {services.map((s) => (
             <article
@@ -253,7 +256,7 @@ function Index() {
       {/* Process */}
       <section className="mx-auto max-w-6xl px-5 py-20">
         <p className="eyebrow">How it works</p>
-        <h2 className="mt-3 text-3xl uppercase sm:text-4xl font-black">Four steps to banish damp &amp; leaks</h2>
+        <h2 className="mt-3 text-3xl uppercase sm:text-4xl font-black">Four steps to banish damp & leaks</h2>
         <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
             ["01", "Damp & Roof inspection", "We assess the property, photograph problem areas, and test wall moisture levels."],
@@ -296,7 +299,7 @@ function Index() {
             Your local liquid rubber genie at your service
           </p>
           <h2 className="text-3xl uppercase text-primary-foreground sm:text-4xl font-black">
-            Banish Leaks &amp; Damp From Your Property
+            Banish Leaks & Damp From Your Property
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-primary-foreground/90 leading-relaxed">
             Book an on-site moisture and roof assessment now. Eliminate damp, peeling paint, and water leaks permanently anywhere in South Africa.

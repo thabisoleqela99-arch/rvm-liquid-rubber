@@ -107,7 +107,7 @@ const projectGallery = [
 ];
 
 function ServicesPage() {
-  const rylfWhatsapp = "https://wa.me/27792859461?text=" + encodeURIComponent("Hi Rylf, I would like to inquire about your waterproofing and damp services.");
+  const businessWhatsapp = "https://wa.me/27712803345?text=" + encodeURIComponent("Hi Rylf.");
 
   return (
     <div>
@@ -211,12 +211,12 @@ function ServicesPage() {
           Contact our team today to schedule an on-site inspection for waterproofing, damp removal, roof sealing, ceiling restoration, or painting.
         </p>
         <div className="mt-8 flex justify-center gap-4 flex-wrap">
-          <a href="tel:0792859461" className="btn-primary">
+          <a href="tel:0712803345" className="btn-primary">
             <Phone className="size-4" aria-hidden="true" />
-            Rylf: 079 285 9461
+            Call Business: 071 280 3345
           </a>
           <a
-            href={rylfWhatsapp}
+            href={businessWhatsapp}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] text-black px-6 py-3 font-semibold hover:bg-[#25D366]/90 transition-colors"

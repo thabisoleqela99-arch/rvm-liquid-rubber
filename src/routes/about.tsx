@@ -7,7 +7,7 @@ import ownerPic from "../assets/Owner-Picture.png";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Your Local Liquid Rubber Genie at Your Service | RVM Liquid Rubber" },
+      { title: "About Us — Your Local Liquid Rubber Genie at Service | RVM Liquid Rubber" },
       {
         name: "description",
         content:
@@ -57,7 +57,7 @@ const communityProjects = [
 ];
 
 function AboutPage() {
-  const rylfWhatsapp = "https://wa.me/27792859461?text=" + encodeURIComponent("Hi Rylf, I would like to request an on-site assessment and quote.");
+  const businessWhatsapp = "https://wa.me/27712803345?text=" + encodeURIComponent("Hi Rylf.");
 
   return (
     <div>
@@ -221,15 +221,15 @@ function AboutPage() {
           </p>
           <h2 className="text-3xl uppercase font-black">Need a Professional Damp or Roof Assessment?</h2>
           <p className="mt-3 text-muted-foreground">
-            Contact <strong>Rylf Naidoo (079 285 9461)</strong> or email <strong>info@rvmconsulting.co.za</strong> to schedule an on-site visit.
+            Business WhatsApp / Call: <strong>071 280 3345</strong> (Alt Call: 079 285 9461) or email <strong>info@rvmconsulting.co.za</strong>.
           </p>
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
-            <a href="tel:0792859461" className="btn-primary">
+            <a href="tel:0712803345" className="btn-primary">
               <Phone className="size-4" aria-hidden="true" />
-              Call Rylf: 079 285 9461
+              Call Business: 071 280 3345
             </a>
             <a
-              href={rylfWhatsapp}
+              href={businessWhatsapp}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] text-black px-6 py-3 font-semibold hover:bg-[#25D366]/90 transition-colors"

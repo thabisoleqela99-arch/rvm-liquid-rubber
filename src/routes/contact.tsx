@@ -13,7 +13,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Your local liquid rubber genie at your service. Contact Rylf Naidoo (079 285 9461) for 10-year guaranteed roof waterproofing, damp removal, painting, and remodeling across South Africa.",
+          "Your local liquid rubber genie at your service. Contact RVM (071 280 3345) for 10-year guaranteed roof waterproofing, damp removal, painting, and remodeling across South Africa.",
       },
       { property: "og:title", content: "Contact RVM Liquid Rubber — Waterproofing & Damp Removal" },
       {
@@ -36,7 +36,7 @@ export function ContactPage() {
   const rylfPic = getAsset("Ralf.png");
 
   // Direct WhatsApp link
-  const rylfWhatsapp = "https://wa.me/27792859461?text=" + encodeURIComponent("Hi Rylf, I would like to request an on-site assessment and quote.");
+  const businessWhatsapp = "https://wa.me/27712803345?text=" + encodeURIComponent("Hi Rylf.");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -70,7 +70,7 @@ export function ContactPage() {
             <div className="rounded-xl border border-border bg-card p-6 space-y-6 shadow-card">
               <h2 className="text-lg font-bold uppercase border-b border-border pb-3">Direct Contact</h2>
 
-              {/* Rylf Naidoo */}
+              {/* Rylf Naidoo & Business Numbers */}
               <div className="flex items-center gap-4">
                 {rylfPic ? (
                   <img
@@ -84,8 +84,12 @@ export function ContactPage() {
                   </div>
                 )}
                 <div>
-                  <p className="text-xs text-muted-foreground uppercase font-semibold">Rylf Naidoo</p>
-                  <a href="tel:0792859461" className="text-base font-bold hover:text-primary transition-colors">
+                  <p className="text-xs text-muted-foreground uppercase font-semibold">Rylf Naidoo (Business Line)</p>
+                  <a href="tel:0712803345" className="text-base font-bold hover:text-primary transition-colors block">
+                    071 280 3345
+                  </a>
+                  <p className="text-xs text-muted-foreground uppercase font-semibold mt-1">Alternative Line</p>
+                  <a href="tel:0792859461" className="text-sm font-semibold hover:text-primary transition-colors block">
                     079 285 9461
                   </a>
                 </div>
@@ -135,7 +139,7 @@ export function ContactPage() {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
                 {/* WhatsApp Button */}
                 <a
-                  href={rylfWhatsapp}
+                  href={businessWhatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col items-center justify-center p-3 rounded-lg border border-[#25D366]/40 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-black transition-all group"

@@ -264,7 +264,7 @@ function RemodelProjectCard({ project }: { project: any }) {
 
 function OurWorksPage() {
   const [activeCategory, setActiveCategory] = useState<string>("all");
-  const rylfWhatsapp = "https://wa.me/27792859461?text=" + encodeURIComponent("Hi Rylf, I saw your work gallery and would like to request an on-site assessment.");
+  const businessWhatsapp = "https://wa.me/27712803345?text=" + encodeURIComponent("Hi Rylf.");
 
   const projectData = {
     remodelling: [
@@ -719,12 +719,12 @@ function OurWorksPage() {
             Contact us today for a professional on-site moisture/roof assessment and itemized quotation.
           </p>
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
-            <a href="tel:0792859461" className="btn-primary">
+            <a href="tel:0712803345" className="btn-primary">
               <Phone className="size-4" aria-hidden="true" />
-              Call Rylf: 079 285 9461
+              Call Business: 071 280 3345
             </a>
             <a
-              href={rylfWhatsapp}
+              href={businessWhatsapp}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] text-black px-6 py-3 font-semibold hover:bg-[#25D366]/90 transition-colors"

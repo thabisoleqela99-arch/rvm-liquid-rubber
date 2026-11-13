@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Mail, MapPin, Send, MessageCircle, Clock, CheckCircle2, Facebook, Instagram } from "lucide-react";
 
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Your local liquid rubber genie at your service. Contact Rylf Naidoo (079 285 9461) or Earl Takka (079 797 3960) for 10-year guaranteed roof waterproofing, damp removal, painting, and remodeling across South Africa.",
+          "Your local liquid rubber genie at your service. Contact Rylf Naidoo (079 285 9461) for 10-year guaranteed roof waterproofing, damp removal, painting, and remodeling across South Africa.",
       },
       { property: "og:title", content: "Contact RVM Liquid Rubber — Waterproofing & Damp Removal" },
       {
@@ -34,7 +34,6 @@ export function ContactPage() {
 
   // Dynamic asset fetching
   const rylfPic = getAsset("Ralf.png");
-  const earlPic = getAsset("Earl.jpeg");
 
   // Direct WhatsApp link
   const rylfWhatsapp = "https://wa.me/27792859461?text=" + encodeURIComponent("Hi Rylf, I would like to request an on-site assessment and quote.");
@@ -69,7 +68,7 @@ export function ContactPage() {
             
             {/* Direct Contacts Info Card */}
             <div className="rounded-xl border border-border bg-card p-6 space-y-6 shadow-card">
-              <h2 className="text-lg font-bold uppercase border-b border-border pb-3">Direct Contacts</h2>
+              <h2 className="text-lg font-bold uppercase border-b border-border pb-3">Direct Contact</h2>
 
               {/* Rylf Naidoo */}
               <div className="flex items-center gap-4">
@@ -88,27 +87,6 @@ export function ContactPage() {
                   <p className="text-xs text-muted-foreground uppercase font-semibold">Rylf Naidoo</p>
                   <a href="tel:0792859461" className="text-base font-bold hover:text-primary transition-colors">
                     079 285 9461
-                  </a>
-                </div>
-              </div>
-
-              {/* Earl Takka */}
-              <div className="flex items-center gap-4">
-                {earlPic ? (
-                  <img
-                    src={earlPic}
-                    alt="Earl Takka"
-                    className="size-12 rounded-full object-cover border-2 border-primary/40 shrink-0"
-                  />
-                ) : (
-                  <div className="size-12 rounded-full bg-primary/10 text-primary border-2 border-primary/40 shrink-0 flex items-center justify-center text-xs font-bold">
-                    ET
-                  </div>
-                )}
-                <div>
-                  <p className="text-xs text-muted-foreground uppercase font-semibold">Earl Takka</p>
-                  <a href="tel:0797973960" className="text-base font-bold hover:text-primary transition-colors">
-                    079 797 3960
                   </a>
                 </div>
               </div>
@@ -213,7 +191,7 @@ export function ContactPage() {
           <div className="lg:col-span-7">
             <div className="rounded-xl border border-border bg-card p-8 shadow-card">
               <p className="text-xs font-bold uppercase tracking-widest text-primary mb-1">
-                Your local liquid rubber genie at your service
+                ✨ Your local liquid rubber genie at your service
               </p>
               <h2 className="text-2xl font-bold uppercase">Request a Formal Quote</h2>
               <p className="text-sm text-muted-foreground mt-1 mb-6 leading-relaxed">
@@ -275,11 +253,11 @@ export function ContactPage() {
                   <div>
                     <label className="block text-xs font-semibold uppercase mb-1.5">Service Required</label>
                     <select className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none">
-                      <option value="damp">Damp Removal &amp; Moisture Proofing</option>
-                      <option value="roofing">Roof Waterproofing &amp; Liquid Rubber</option>
-                      <option value="remodelling">Remodeling &amp; Structural Repairs</option>
-                      <option value="painting">Interior &amp; Exterior Painting</option>
-                      <option value="ceiling">Ceiling Repairs &amp; Installation</option>
+                      <option value="damp">Damp Removal & Moisture Proofing</option>
+                      <option value="roofing">Roof Waterproofing & Liquid Rubber</option>
+                      <option value="remodelling">Remodeling & Structural Repairs</option>
+                      <option value="painting">Interior & Exterior Painting</option>
+                      <option value="ceiling">Ceiling Repairs & Installation</option>
                       <option value="refurbishment">Full Property Refurbishment</option>
                       <option value="other">Other / General Inquiry</option>
                     </select>

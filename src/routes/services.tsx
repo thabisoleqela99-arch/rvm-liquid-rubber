@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Building2, Droplets, Home, Layers, ShieldCheck, Wrench, Bath, Hammer, HardHat, Paintbrush, ShieldAlert, Phone } from "lucide-react";
+import { Building2, Droplets, Home, Layers, ShieldCheck, Wrench, Bath, Hammer, HardHat, Paintbrush, ShieldAlert, Phone, MessageCircle } from "lucide-react";
 
 import serviceCommercial from "@/assets/service-commercial.jpg";
 import serviceResidential from "@/assets/service-residential.jpg";
@@ -107,6 +107,8 @@ const projectGallery = [
 ];
 
 function ServicesPage() {
+  const rylfWhatsapp = "https://wa.me/27792859461?text=" + encodeURIComponent("Hi Rylf, I would like to inquire about your waterproofing and damp services.");
+
   return (
     <div>
       {/* Header */}
@@ -118,7 +120,7 @@ function ServicesPage() {
             </p>
           </div>
           <h1 className="mt-2 max-w-3xl text-4xl uppercase sm:text-5xl font-black">
-            Waterproofing, Damp Removal &amp; Remodeling
+            Waterproofing, Damp Removal & Remodeling
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
             Delivering 10-year guaranteed liquid rubber waterproofing, permanent damp removal, roof leak isolation, ceiling board repairs, and full property refurbishments across South Africa.
@@ -129,7 +131,7 @@ function ServicesPage() {
       {/* Service Cards Grid */}
       <section className="mx-auto max-w-6xl px-5 py-20">
         <p className="eyebrow text-primary font-bold mb-2">Our Capabilities</p>
-        <h2 className="text-3xl uppercase font-black mb-10">Expert Property &amp; Moisture Solutions</h2>
+        <h2 className="text-3xl uppercase font-black mb-10">Expert Property & Moisture Solutions</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {coreServices.map((s) => (
             <div key={s.title} className="rounded-lg border border-border bg-card p-6 shadow-card flex flex-col justify-between">
@@ -146,7 +148,7 @@ function ServicesPage() {
       {/* Mandatory Site Assessment Banner */}
       <section className="border-y border-border bg-deep py-12">
         <div className="mx-auto max-w-6xl px-5 text-center">
-          <p className="eyebrow">Accurate Pricing &amp; Engineering Standards</p>
+          <p className="eyebrow">Accurate Pricing & Engineering Standards</p>
           <h2 className="mt-2 text-2xl uppercase sm:text-3xl font-bold">On-Site Inspection Required Before Quotation</h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground leading-relaxed">
             To guarantee precise pricing and eliminate hidden costs, our team conducts thorough physical site assessments prior to delivering itemized quotes for waterproofing, damp removal, and structural work. For weight-bearing wall alterations, we consult certified structural engineers.
@@ -159,7 +161,7 @@ function ServicesPage() {
         <div className="mx-auto max-w-6xl px-5">
           <div className="text-center">
             <p className="eyebrow text-primary font-bold mb-2">Proven Results</p>
-            <h2 className="text-3xl uppercase font-black">Recent Before &amp; After Transformations</h2>
+            <h2 className="text-3xl uppercase font-black">Recent Before & After Transformations</h2>
             <p className="mt-2 text-muted-foreground">
               Real transformations across our roof waterproofing, damp removal, painting, and structural restoration jobs nationwide.
             </p>
@@ -202,9 +204,9 @@ function ServicesPage() {
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-5 py-20 text-center">
         <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">
-          Your local liquid rubber genie at your service
+          ✨ Your local liquid rubber genie at your service
         </p>
-        <h2 className="text-3xl uppercase font-black">Ready to Banish Leaks &amp; Wall Damp?</h2>
+        <h2 className="text-3xl uppercase font-black">Ready to Banish Leaks & Wall Damp?</h2>
         <p className="mt-4 max-w-xl mx-auto text-muted-foreground">
           Contact our team today to schedule an on-site inspection for waterproofing, damp removal, roof sealing, ceiling restoration, or painting.
         </p>
@@ -213,9 +215,14 @@ function ServicesPage() {
             <Phone className="size-4" aria-hidden="true" />
             Rylf: 079 285 9461
           </a>
-          <a href="tel:0797973960" className="btn-primary">
-            <Phone className="size-4" aria-hidden="true" />
-            Earl: 079 797 3960
+          <a
+            href={rylfWhatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] text-black px-6 py-3 font-semibold hover:bg-[#25D366]/90 transition-colors"
+          >
+            <MessageCircle className="size-4 fill-current" />
+            WhatsApp Us
           </a>
           <Link to="/contact" className="btn-outline">
             Request a Quote

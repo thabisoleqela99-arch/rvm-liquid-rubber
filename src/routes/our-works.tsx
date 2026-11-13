@@ -3,7 +3,7 @@ import { useState } from "react";
 import { 
   Hammer, Paintbrush, Home, Building2, Layers, Wrench, Phone, 
   ArrowRight, CheckCircle2, History, ChevronLeft, ChevronRight, 
-  Maximize2, X, ChevronDown, ChevronUp, ShieldAlert
+  Maximize2, X, ChevronDown, ChevronUp, MessageCircle
 } from "lucide-react";
 
 export const Route = createFileRoute("/our-works")({
@@ -264,6 +264,7 @@ function RemodelProjectCard({ project }: { project: any }) {
 
 function OurWorksPage() {
   const [activeCategory, setActiveCategory] = useState<string>("all");
+  const rylfWhatsapp = "https://wa.me/27792859461?text=" + encodeURIComponent("Hi Rylf, I saw your work gallery and would like to request an on-site assessment.");
 
   const projectData = {
     remodelling: [
@@ -711,20 +712,25 @@ function OurWorksPage() {
       <section className="border-t border-border bg-deep py-16 text-center">
         <div className="mx-auto max-w-4xl px-5">
           <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">
-            Your local liquid rubber genie at your service
+            ✨ Your local liquid rubber genie at your service
           </p>
-          <h2 className="text-3xl uppercase font-black">Ready to Banish Leaks &amp; Damp From Your Property?</h2>
+          <h2 className="text-3xl uppercase font-black">Ready to Banish Leaks & Damp From Your Property?</h2>
           <p className="mt-3 text-muted-foreground">
             Contact us today for a professional on-site moisture/roof assessment and itemized quotation.
           </p>
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
             <a href="tel:0792859461" className="btn-primary">
               <Phone className="size-4" aria-hidden="true" />
-              Call Rylf (079 285 9461)
+              Call Rylf: 079 285 9461
             </a>
-            <a href="tel:0797973960" className="btn-primary">
-              <Phone className="size-4" aria-hidden="true" />
-              Call Earl (079 797 3960)
+            <a
+              href={rylfWhatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] text-black px-6 py-3 font-semibold hover:bg-[#25D366]/90 transition-colors"
+            >
+              <MessageCircle className="size-4 fill-current" />
+              WhatsApp Us
             </a>
             <Link to="/contact" className="btn-outline flex items-center gap-2">
               Request a Quote <ArrowRight className="size-4" />

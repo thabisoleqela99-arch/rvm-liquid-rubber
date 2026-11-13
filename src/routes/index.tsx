@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Building2, CheckCircle2, Droplets, Hammer, Phone, ShieldCheck, Wrench, ShieldAlert } from "lucide-react";
+import { Building2, CheckCircle2, Droplets, Hammer, Phone, ShieldCheck, Wrench, ShieldAlert, MessageCircle } from "lucide-react";
 
 import { ProjectCarousel } from "@/components/ProjectCarousel";
 
@@ -103,6 +103,8 @@ const regions = [
 ];
 
 function Index() {
+  const rylfWhatsapp = "https://wa.me/27792859461?text=" + encodeURIComponent("Hi Rylf, I would like to request an on-site assessment and quote.");
+
   return (
     <div>
       {/* Hero */}
@@ -134,11 +136,16 @@ function Index() {
             <div className="flex flex-wrap gap-3">
               <a href="tel:0792859461" className="btn-primary">
                 <Phone className="size-4" aria-hidden="true" />
-                Rylf: 079 285 9461
+                Call Rylf: 079 285 9461
               </a>
-              <a href="tel:0797973960" className="btn-primary">
-                <Phone className="size-4" aria-hidden="true" />
-                Earl: 079 797 3960
+              <a
+                href={rylfWhatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] text-black px-6 py-3 font-semibold hover:bg-[#25D366]/90 transition-colors"
+              >
+                <MessageCircle className="size-4 fill-current" />
+                WhatsApp Us
               </a>
             </div>
             <a
@@ -185,7 +192,7 @@ function Index() {
       <section className="border-t border-border bg-deep py-16">
         <div className="mx-auto max-w-6xl px-5">
           <div className="text-center">
-            <p className="eyebrow">Your local liquid rubber genie at your service</p>
+            <p className="eyebrow">✨ Your local liquid rubber genie at your service</p>
             <h2 className="mt-3 text-3xl uppercase sm:text-4xl font-black">See Our Work in Action</h2>
             <p className="mt-2 text-muted-foreground">
               Watch our team complete high-quality liquid rubber roof waterproofing, damp removal, and structural repairs.
@@ -296,7 +303,7 @@ function Index() {
       <section className="mx-auto max-w-6xl px-5 py-20">
         <div className="rounded-lg border border-border bg-gradient-accent p-10 text-center shadow-lift">
           <p className="text-xs font-bold uppercase tracking-widest text-primary-foreground/90 mb-2">
-            Your local liquid rubber genie at your service
+            ✨ Your local liquid rubber genie at your service
           </p>
           <h2 className="text-3xl uppercase text-primary-foreground sm:text-4xl font-black">
             Banish Leaks & Damp From Your Property
@@ -309,13 +316,16 @@ function Index() {
               href="tel:0792859461"
               className="inline-flex items-center justify-center rounded-sm bg-deep px-6 py-3 font-semibold text-deep-foreground transition-transform hover:-translate-y-0.5"
             >
-              Call Rylf (079 285 9461)
+              Call Rylf: 079 285 9461
             </a>
             <a
-              href="tel:0797973960"
-              className="inline-flex items-center justify-center rounded-sm bg-deep px-6 py-3 font-semibold text-deep-foreground transition-transform hover:-translate-y-0.5"
+              href={rylfWhatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#25D366] text-black px-6 py-3 font-semibold transition-transform hover:-translate-y-0.5"
             >
-              Call Earl (079 797 3960)
+              <MessageCircle className="size-4 fill-current" />
+              WhatsApp Us
             </a>
             <Link
               to="/contact"

@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ShieldCheck, HeartHandshake, HardHat, Phone, Users, Sparkles, Building2, ShieldAlert, Droplets } from "lucide-react";
+import { ShieldCheck, HeartHandshake, HardHat, Phone, Users, Sparkles, Building2, ShieldAlert, Droplets, MessageCircle } from "lucide-react";
 
 // Asset Import
 import ownerPic from "../assets/Owner-Picture.png";
@@ -11,7 +11,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Your local liquid rubber genie at your service. Learn about RVM Trading and Consulting t/a RVM Liquid Rubber. Driven owner-managed business with a hands-on approach, dedicated to safety, SABS-tested liquid rubber waterproofing, permanent damp removal, site prayer, and community outreach nationwide.",
+          "Your local liquid rubber genie at your service. Learn about RVM Trading and Consulting t/a RVM Liquid Rubber. Driven owner-managed business with a hands-on approach, dedicated to safety, SABS-tested liquid rubber waterproofing, permanent damp removal, and community outreach nationwide.",
       },
       { property: "og:title", content: "About RVM Liquid Rubber — Waterproofing & Damp Removal Specialists" },
       {
@@ -57,6 +57,8 @@ const communityProjects = [
 ];
 
 function AboutPage() {
+  const rylfWhatsapp = "https://wa.me/27792859461?text=" + encodeURIComponent("Hi Rylf, I would like to request an on-site assessment and quote.");
+
   return (
     <div>
       {/* Header */}
@@ -68,7 +70,7 @@ function AboutPage() {
             </p>
           </div>
           <h1 className="mt-2 max-w-3xl text-4xl uppercase sm:text-5xl font-black">
-            Craftsmanship, Safety &amp; Purpose
+            Craftsmanship, Safety & Purpose
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
             RVM Trading and Consulting (trading as <strong>RVM Liquid Rubber</strong>) is a driven owner-managed business with a hands-on approach, delivering premium 10-year guaranteed waterproofing, specialized damp removal, plumbing, tiling, and interior refurbishments across South Africa.
@@ -92,7 +94,7 @@ function AboutPage() {
           {/* Details Column */}
           <div>
             <p className="eyebrow text-primary font-bold">About Our Practice</p>
-            <h2 className="mt-3 text-3xl uppercase font-black">Hand-Applied Quality &amp; Total Damp Protection</h2>
+            <h2 className="mt-3 text-3xl uppercase font-black">Hand-Applied Quality & Total Damp Protection</h2>
             
             <p className="mt-4 text-muted-foreground leading-relaxed">
               <strong>RVM Trading and Consulting</strong> (trading as <strong>RVM Liquid Rubber</strong>) is your local liquid rubber genie at your service — a driven owner-managed business with a hands-on approach delivering premium waterproofing, rising damp elimination, plumbing, tiling, and interior refurbishments for residential and commercial properties nationwide.
@@ -100,11 +102,11 @@ function AboutPage() {
 
             <div className="mt-6 space-y-4 text-sm text-muted-foreground leading-relaxed">
               <p>
-                <strong className="text-foreground">Waterproofing &amp; Damp Expertise:</strong> We specialize in high-durability liquid rubber waterproofing painted directly by hand for maximum coverage, backed by a 10-year written guarantee. Driven by proven industry expertise, we eradicate persistent rising damp, peeling paint, and wall moisture using SABS / BAA tested sealers and chemical barriers.
+                <strong className="text-foreground">Waterproofing & Damp Expertise:</strong> We specialize in high-durability liquid rubber waterproofing painted directly by hand for maximum coverage, backed by a 10-year written guarantee. Driven by proven industry expertise, we eradicate persistent rising damp, peeling paint, and wall moisture using SABS / BAA tested sealers and chemical barriers.
               </p>
               
               <p>
-                <strong className="text-foreground">Safety &amp; Compliance:</strong> Fully compliant with height-safety regulations, equipped with proper harnesses, helmets, safety goggles, and professional machinery for seamless interior and exterior remodeling.
+                <strong className="text-foreground">Safety & Compliance:</strong> Fully compliant with height-safety regulations, equipped with proper harnesses, helmets, safety goggles, and professional machinery for seamless interior and exterior remodeling.
               </p>
 
               <p>
@@ -121,7 +123,7 @@ function AboutPage() {
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <p className="eyebrow text-primary font-bold">Operational Standards</p>
-            <h2 className="mt-3 text-3xl uppercase font-black">Honest Pricing &amp; Certified Scope</h2>
+            <h2 className="mt-3 text-3xl uppercase font-black">Honest Pricing & Certified Scope</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               We focus on interior remodeling, permanent rising damp removal, bathroom updates, tiling, plumbing, and structural roof waterproofing for residential and commercial spaces nationwide rather than building ground-up houses from scratch.
             </p>
@@ -135,23 +137,23 @@ function AboutPage() {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
                 <ShieldCheck className="size-4 text-primary shrink-0" />
-                Roof &amp; wall liquid rubber waterproofing (10-Year Guarantee)
+                Roof & wall liquid rubber waterproofing (10-Year Guarantee)
               </li>
               <li className="flex items-center gap-2">
                 <ShieldAlert className="size-4 text-primary shrink-0" />
-                Permanent damp removal, chemical DPC injection &amp; salt treatment
+                Permanent damp removal, chemical DPC injection & salt treatment
               </li>
               <li className="flex items-center gap-2">
                 <ShieldCheck className="size-4 text-primary shrink-0" />
-                Plumbing, tiling, bathroom &amp; toilet refurbishments
+                Plumbing, tiling, bathroom & toilet refurbishments
               </li>
               <li className="flex items-center gap-2">
                 <ShieldCheck className="size-4 text-primary shrink-0" />
-                Interior remodeling &amp; consultant-approved wall modifications
+                Interior remodeling & consultant-approved wall modifications
               </li>
               <li className="flex items-center gap-2">
                 <ShieldCheck className="size-4 text-primary shrink-0" />
-                Strict site safety gear compliance &amp; insurance-tested materials
+                Strict site safety gear compliance & insurance-tested materials
               </li>
             </ul>
           </div>
@@ -163,7 +165,7 @@ function AboutPage() {
         <div className="mx-auto max-w-6xl px-5">
           <div className="text-center">
             <p className="eyebrow text-primary font-bold">What Drives Us</p>
-            <h2 className="mt-3 text-3xl uppercase font-black">Company Values &amp; Workplace Culture</h2>
+            <h2 className="mt-3 text-3xl uppercase font-black">Company Values & Workplace Culture</h2>
           </div>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v) => (
@@ -182,7 +184,7 @@ function AboutPage() {
         <div className="grid gap-10 lg:grid-cols-2 items-center">
           <div>
             <p className="eyebrow text-primary font-bold">Giving Back</p>
-            <h2 className="mt-3 text-3xl uppercase font-black">Community &amp; Outreach Initiatives</h2>
+            <h2 className="mt-3 text-3xl uppercase font-black">Community & Outreach Initiatives</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               We believe business success should directly uplift surrounding communities. Beyond commercial operations, RVM Liquid Rubber actively participates in social development, community venue refurbishments, and moisture protection for local facilities.
             </p>
@@ -215,20 +217,25 @@ function AboutPage() {
       <section className="border-t border-border bg-deep py-16 text-center">
         <div className="mx-auto max-w-4xl px-5">
           <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">
-            Your local liquid rubber genie at your service
+            ✨ Your local liquid rubber genie at your service
           </p>
           <h2 className="text-3xl uppercase font-black">Need a Professional Damp or Roof Assessment?</h2>
           <p className="mt-3 text-muted-foreground">
-            Contact <strong>Rylf Naidoo (079 285 9461)</strong> or <strong>Earl Takka (079 797 3960)</strong>, or email <strong>info@rvmconsulting.co.za</strong> to schedule an on-site visit.
+            Contact <strong>Rylf Naidoo (079 285 9461)</strong> or email <strong>info@rvmconsulting.co.za</strong> to schedule an on-site visit.
           </p>
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
             <a href="tel:0792859461" className="btn-primary">
               <Phone className="size-4" aria-hidden="true" />
-              Call Rylf
+              Call Rylf: 079 285 9461
             </a>
-            <a href="tel:0797973960" className="btn-primary">
-              <Phone className="size-4" aria-hidden="true" />
-              Call Earl
+            <a
+              href={rylfWhatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] text-black px-6 py-3 font-semibold hover:bg-[#25D366]/90 transition-colors"
+            >
+              <MessageCircle className="size-4 fill-current" />
+              WhatsApp Us
             </a>
             <Link to="/contact" className="btn-outline">
               Request a quote

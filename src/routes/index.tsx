@@ -11,17 +11,17 @@ import serviceCommercial from "@/assets/service-commercial.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "RVM Liquid Rubber — Waterproofing & Damp Removal Specialists Nationwide" },
+      { title: "RVM Liquid Rubber | Liquid Rubber Waterproofing & Damp Proofing Johannesburg" },
       {
         name: "description",
         content:
-          "Your local liquid rubber genie at your service. RVM offers 10-year guaranteed roof waterproofing, permanent damp removal, rising damp treatment, and home improvement across South Africa.",
+          "Professional liquid rubber waterproofing, damp proofing, and roof repair specialists in Johannesburg. 10-year written guarantee on rising damp and leak sealing.",
       },
-      { property: "og:title", content: "RVM Liquid Rubber — Waterproofing & Advanced Damp Removal" },
+      { property: "og:title", content: "RVM Liquid Rubber | Waterproofing & Damp Proofing Johannesburg" },
       {
         property: "og:description",
         content:
-          "Liquid rubber roof waterproofing, specialized damp removal, rising damp sealing, leak detection, and property maintenance nationwide. Your local liquid rubber genie at your service.",
+          "Stop peeling paint, blistering plaster, and roof leaks for good with RVM Liquid Rubber waterproofing in Johannesburg. 10-year written guarantee.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -42,11 +42,12 @@ export const Route = createFileRoute("/")({
           email: "info@rvmconsulting.co.za",
           telephone: "071 280 3345",
           description:
-            "Roof waterproofing, permanent damp removal, rising damp treatment, and structural home improvement specialists across South Africa.",
+            "Liquid rubber waterproofing, permanent damp removal, rising damp treatment, and roof leak repairs across Johannesburg and South Africa.",
           areaServed: "South Africa",
           address: {
             "@type": "PostalAddress",
             addressCountry: "ZA",
+            addressLocality: "Johannesburg",
           },
         }),
       },
@@ -59,19 +60,19 @@ const services = [
   {
     icon: Droplets,
     title: "Liquid Rubber Waterproofing",
-    copy: "Seamless, elastic liquid rubber application ideal for flat concrete roofs, parapets, sheet metal, and box gutters. Backed by a 10-year written guarantee.",
+    copy: "Seamless, elastic liquid rubber application ideal for flat concrete roofs, parapets, sheet metal, and box gutters in Johannesburg. Backed by a 10-year written guarantee.",
     image: serviceTorchOn,
   },
   {
     icon: ShieldAlert,
-    title: "Advanced Damp Removal & Proofing",
+    title: "Advanced Damp Proofing & Removal",
     copy: "Permanent rising damp treatment, chemical barrier injection, wall plaster stripping, anti-fungal sealing, and moisture barrier coatings to eliminate peeling paint.",
     image: serviceResidential,
   },
   {
     icon: Hammer,
-    title: "Home Improvement & Remodeling",
-    copy: "Comprehensive property overhauls, exterior wall repainting, ceiling board repairs, and structural alterations verified by engineering consultants.",
+    title: "Home Improvement & Roof Repairs",
+    copy: "Comprehensive property overhauls, roof leak repairs, exterior wall repainting, ceiling board repairs, and structural alterations verified by engineering consultants.",
     image: serviceCommercial,
   },
 ];
@@ -85,13 +86,13 @@ const extras = [
   },
   {
     icon: Droplets,
-    title: "Damp & Mold Remediation",
-    copy: "Complete removal of trapped wall moisture, white salt damp efflorescence, and toxic black mold spore treatments.",
+    title: "Rising Damp & Mold Remediation",
+    copy: "Complete removal of trapped wall moisture, white salt damp efflorescence, and toxic black mold spore treatments in Johannesburg.",
   },
 ];
 
 const regions = [
-  "Gauteng",
+  "Gauteng (Johannesburg & Pretoria)",
   "KwaZulu-Natal",
   "Western Cape",
   "Eastern Cape",
@@ -111,7 +112,7 @@ function Index() {
       <section className="relative overflow-hidden">
         <img
           src={heroRoof}
-          alt="RVM Liquid Rubber technician applying protective coating on a rooftop"
+          alt="Liquid rubber roof waterproofing application in Johannesburg by RVM technician"
           width={1600}
           height={1008}
           className="absolute inset-0 size-full object-cover opacity-45"
@@ -126,10 +127,10 @@ function Index() {
           </div>
 
           <h1 className="mt-2 max-w-3xl text-4xl uppercase sm:text-5xl md:text-6xl font-black">
-            Waterproofing, Damp Removal & Home Improvement
+            Liquid Rubber Waterproofing, Damp Proofing & Roof Repairs in Johannesburg
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed">
-            Stop peeling paint, blistering plaster, and roof leaks for good. RVM Liquid Rubber banishes rising damp and protects properties nationwide with written 10-year guarantees.
+            Stop peeling paint, blistering plaster, and roof leaks for good. RVM Liquid Rubber provides specialized <strong>liquid rubber waterproofing</strong>, <strong>damp proofing</strong>, and <strong>rising damp treatment</strong> across Johannesburg and nationwide with written 10-year guarantees.
           </p>
           
           <div className="mt-9 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
@@ -158,8 +159,8 @@ function Index() {
 
           <dl className="mt-14 grid max-w-2xl grid-cols-2 gap-6 sm:grid-cols-4">
             {[
-              ["Proven", "Nationwide roof & damp expertise"],
-              ["100%", "Permanent damp removal"],
+              ["Proven", "Johannesburg roof & damp expertise"],
+              ["100%", "Permanent rising damp removal"],
               ["10-Year", "Written guarantees"],
               ["Full", "Property restoration scope"],
             ].map(([stat, label]) => (
@@ -179,7 +180,7 @@ function Index() {
             <span className="text-xs font-bold uppercase tracking-widest text-primary">Moisture & Damp Notice</span>
             <h3 className="text-xl font-bold uppercase mt-1">Is damp destroying your walls or bubbling your paint?</h3>
             <p className="text-sm text-muted-foreground mt-1 max-w-2xl">
-              Heavy coastal and inland weather cycles cause severe rising damp and lateral moisture penetration in ground-floor walls. Painting over it won't work — we neutralize the salt and install permanent moisture barriers.
+              Heavy coastal and inland weather cycles cause severe rising damp and lateral moisture penetration in ground-floor walls. Painting over it won't work — we neutralize the salt and install permanent moisture barriers with high-performance <strong>liquid rubber membrane coatings</strong>.
             </p>
           </div>
           <Link to="/contact" className="btn-primary shrink-0">
@@ -193,9 +194,9 @@ function Index() {
         <div className="mx-auto max-w-6xl px-5">
           <div className="text-center">
             <p className="eyebrow">✨ Your local liquid rubber genie at your service</p>
-            <h2 className="mt-3 text-3xl uppercase sm:text-4xl font-black">See Our Work in Action</h2>
+            <h2 className="mt-3 text-3xl uppercase sm:text-4xl font-black">See Our Liquid Rubber Waterproofing & Damp Proofing Projects</h2>
             <p className="mt-2 text-muted-foreground">
-              Watch our team complete high-quality liquid rubber roof waterproofing, damp removal, and structural repairs.
+              Watch our team complete high-quality liquid rubber roof waterproofing, damp removal, and structural repairs in Johannesburg.
             </p>
           </div>
           <div className="mt-8 flex justify-center">
@@ -212,7 +213,7 @@ function Index() {
       {/* Service Card Grid (What We Do) */}
       <section className="mx-auto max-w-6xl px-5 py-20">
         <p className="eyebrow">What we do</p>
-        <h2 className="mt-3 text-3xl uppercase sm:text-4xl font-black">Waterproofing, Damp Removal & Remodeling</h2>
+        <h2 className="mt-3 text-3xl uppercase sm:text-4xl font-black">Liquid Rubber Waterproofing, Damp Proofing & Remodeling</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {services.map((s) => (
             <article
@@ -221,7 +222,7 @@ function Index() {
             >
               <img
                 src={s.image}
-                alt={s.title}
+                alt={`${s.title} service in Johannesburg by RVM Liquid Rubber`}
                 loading="lazy"
                 width={900}
                 height={700}
@@ -263,11 +264,11 @@ function Index() {
       {/* Process */}
       <section className="mx-auto max-w-6xl px-5 py-20">
         <p className="eyebrow">How it works</p>
-        <h2 className="mt-3 text-3xl uppercase sm:text-4xl font-black">Four steps to banish damp & leaks</h2>
+        <h2 className="mt-3 text-3xl uppercase sm:text-4xl font-black">Four steps to banish damp & roof leaks</h2>
         <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
             ["01", "Damp & Roof inspection", "We assess the property, photograph problem areas, and test wall moisture levels."],
-            ["02", "Written quote", "Itemised scope of work, damp-proofing materials, timeline, and guarantee details."],
+            ["02", "Written quote", "Itemised scope of work, liquid rubber materials, timeline, and guarantee details."],
             ["03", "Execution", "Plaster removal, chemical damp barriers, liquid rubber application, and protective painting."],
             ["04", "Sign-off", "Moisture re-testing, handover pack, and 10-year written guarantee certificate."],
           ].map(([num, title, copy]) => (
@@ -284,7 +285,7 @@ function Index() {
       <section className="border-t border-border bg-deep">
         <div className="mx-auto max-w-6xl px-5 py-16">
           <p className="eyebrow">Service Coverage</p>
-          <h2 className="mt-3 text-2xl uppercase sm:text-3xl font-black">Operating Nationwide Across South Africa</h2>
+          <h2 className="mt-3 text-2xl uppercase sm:text-3xl font-black">Operating Across Johannesburg & South Africa</h2>
           <ul className="mt-8 flex flex-wrap gap-2">
             {regions.map((r) => (
               <li
@@ -306,10 +307,10 @@ function Index() {
             ✨ Your local liquid rubber genie at your service
           </p>
           <h2 className="text-3xl uppercase text-primary-foreground sm:text-4xl font-black">
-            Banish Leaks & Damp From Your Property
+            Banish Roof Leaks & Rising Damp From Your Property
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-primary-foreground/90 leading-relaxed">
-            Book an on-site moisture and roof assessment now. Eliminate damp, peeling paint, and water leaks permanently anywhere in South Africa.
+            Book an on-site moisture and roof assessment now. Eliminate rising damp, peeling paint, and water leaks permanently with liquid rubber waterproofing in Johannesburg and nationwide.
           </p>
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
             <a
